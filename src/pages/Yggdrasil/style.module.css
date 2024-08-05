@@ -1,0 +1,91 @@
+/* src/pages/Yggdrasil/style.module.css */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 200vh; /* Assurez-vous que le contenu dépasse la hauteur de l'écran */
+    overflow: hidden;
+    background: linear-gradient(180deg, #646A7E, #646A7E, #786386, #8C5C8E);
+  }
+  
+  .cloud {
+    position: absolute;
+    width: 20%;
+    height: auto;
+    opacity: 0.2;
+  }
+  
+  .cloud1 {
+    top: 10%;
+    left: 10%;
+  }
+  
+  .cloud2 {
+    top: 20%;
+    right: 20%;
+  }
+  
+  .cloud3 {
+    top: 30%;
+    left: 50%;
+  }
+  
+  .cloud4 {
+    top: 40%;
+    right: 10%;
+  }
+  
+  .cloud5 {
+    top: 50%;
+    left: 30%;
+  }
+  
+  .tree {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+  }
+  
+  .worlds {
+    position: relative;
+    top: 150vh; /* Positionné après l'arbre */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .world-circle {
+    position: relative;
+    margin: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: white;  /* ou une couleur transparente si tu veux */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .world-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .world-circle p {
+    position: absolute;
+    bottom: -20px;  /* ajuste selon tes besoins */
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+  
+  
+  

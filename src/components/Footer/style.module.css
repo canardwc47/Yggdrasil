@@ -1,0 +1,64 @@
+/* src/components/Footer.module.css */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0); /* Transparence pour que le fond soit le même que celui de la page */
+    z-index: 1000;
+  }
+  
+  .footer ul {
+    list-style-type: none; /* Supprime les puces de la liste */
+    margin: 0; /* Supprime la marge par défaut */
+    padding: 0; /* Supprime le padding par défaut */
+  }
+  
+  .footer li {
+    margin: 0 0 10px 0; /* Ajoute une marge en bas de chaque élément */
+  }
+  
+  .footer a {
+    color: white; /* Fixe la couleur du texte à blanc */
+    text-decoration: none; /* Supprime le soulignement par défaut des liens */
+    font-family: 'Lacquer', sans-serif; /* Utilise la police 'Lacquer' */
+    text-transform: capitalize; /* Met la première lettre de chaque mot en majuscule */
+    font-size: 18px; /* Fixe la taille de la police */
+  }
+  
+  .footer .center img {
+    height: 80px; /* Fixe la hauteur de l'image du logo */
+    margin: 10px; /* Ajoute une marge autour de l'image du logo */
+  }
+  
+  @media (max-width: 744px) {
+    .footer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer .left, .footer .right {
+      margin: 20px 0;
+    }
+  
+    .footer a {
+      font-size: 16px; /* Réduire la taille du texte pour les tablettes */
+    }
+  }
+  
+  @media (max-width: 340px) {
+    .footer a {
+      font-size: 14px; /* Réduire encore plus la taille du texte pour les mobiles */
+    }
+  
+    .footer .center img {
+      height: 60px; /* Réduire encore plus la taille du logo pour les mobiles */
+    }
+  }
+  
+  
+  
+  
+  
