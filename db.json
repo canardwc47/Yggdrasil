@@ -1,0 +1,22 @@
+{
+    "mondes": [
+      {
+        "title": "Asgard",
+        "content": "Asgard est le royaume céleste des dieux Ases dans la mythologie nordique, caractérisé par ses palais dorés, ses jardins luxuriants, et ses importants lieux sacrés comme la Fontaine d’Urd. En tant que centre du pouvoir divin, Asgard est responsable de la protection des mondes et de l'équilibre cosmique, servant de résidence et de lieu de rassemblement pour les dieux qui régulent les affaires des autres royaumes.",
+        "image": "/assets-img/Asgard.jpg",
+        "id": "1"
+
+
+
+      },
+
+      {
+        "title": "Helheim",
+        "content": "Helheim est le royaume sombre des morts dans la mythologie nordique, caractérisé par ses paysages lugubres, ses vastes plaines glaciales, et son atmosphère froide et désolée. En tant que domaine de la déesse Hel, Helheim accueille les âmes des défunts qui n'ont pas trouvé de mort héroïque au combat. Ce royaume est une terre de tristesse et de désespoir, servant de dernière demeure pour ceux qui y sont condamnés. Helheim symbolise la fin et l'immobilité, contrastant avec la vitalité et le dynamisme des autres mondes, et rappelle aux vivants la réalité inéluctable de la mort.",
+        "image": "/assets-img/Helheim.webp",
+        "id": "2"
+      }
+
+
+    ]
+}
