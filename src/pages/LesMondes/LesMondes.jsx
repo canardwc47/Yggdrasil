@@ -1,18 +1,20 @@
-// src/pages/LesMondes/LesMondes.jsx
+// LesMondes.js
 import React from 'react';
-import styles from './style.module.css';
-import BackgroundPage from '../../components/Background-Page/Background-Page';
+import TextMonde from '../../components/TextMonde/TextMonde';
 
 const LesMondes = () => {
+  const mondeIds = [1, 2]; // IDs des mondes que vous souhaitez afficher
+
   return (
-    <BackgroundPage>
-      <div className={styles.container}>
-        <h1>Les Mondes</h1>
-        {/* Ajoute ton contenu ici */}
-      </div>
-    </BackgroundPage>
+    <div>
+      {mondeIds.map(id => (
+        <TextMonde key={id} id={id} />
+      ))}
+    </div>
   );
 };
 
 export default LesMondes;
+
+
 
