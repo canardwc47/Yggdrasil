@@ -1,0 +1,33 @@
+/* TextMonde.css */
+.MondeContainer {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Arial, sans-serif';
+    color: #fff;
+    background-color: #2d2d2d; /* Adjust the background color as needed */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .monde-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .monde-image-container {
+    margin-bottom: 20px;
+  }
+  
+  .monde-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .monde-content {
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
+  

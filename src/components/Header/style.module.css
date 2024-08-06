@@ -1,162 +1,152 @@
-/* Le conteneur principal du header */
+/* src/components/Header/Header.module.css */
 .header {
-    position: absolute; /* Positionne l'élément par rapport à son parent le plus proche positionné */
-    width: 100%; /* Fixe la largeur du header à 80% du conteneur parent */
-    display: flex; /* Utilise Flexbox pour disposer les enfants en ligne */
-    align-items: center; /* Aligne les éléments enfants au centre verticalement */
-    background: rgba(0, 0, 0, 0); /* Fixe un fond transparent */
-    z-index: 1000; /* Assure que le header reste au-dessus des autres éléments */
-    transition: transform 0.3s ease-in-out; /* Ajoute une transition pour les transformations */
-  }
-  
-  /* Conteneur pour le logo */
-  .logo {
-    display: flex; /* Utilise Flexbox pour disposer les enfants en ligne */
-    align-items: center; /* Aligne les éléments enfants au centre verticalement */
-  }
-  
-  /* Image du logo */
-  .logo img {
-    height: 100px; /* Fixe la hauteur de l'image du logo */
-    margin: 30px; /* Ajoute une marge autour de l'image du logo */
-  }
-  
-  /* Liste de navigation */
-  .nav ul {
-    list-style-type: none; /* Supprime les puces de la liste */
-    margin: 0; /* Supprime la marge par défaut */
-    padding: 0; /* Supprime le padding par défaut */
-    display: flex; /* Utilise Flexbox pour disposer les éléments de la liste en ligne */
-  }
-  
-  /* Élément de la liste de navigation */
-  .nav li {
-    margin: 0 15px; /* Ajoute une marge à gauche et à droite de chaque élément */
-    position: relative; /* Positionne l'élément par rapport à lui-même, nécessaire pour les pseudo-éléments */
-  }
-  
-  /* Liens de navigation */
-  .nav a {
-    color: white; /* Fixe la couleur du texte à blanc */
-    text-decoration: none; /* Supprime le soulignement par défaut des liens */
-    font-family: 'Lacquer', sans-serif; /* Utilise la police 'Lacquer' */
-    text-transform: capitalize; /* Met la première lettre de chaque mot en majuscule */
-    font-size: 24px; /* Fixe la taille de la police */
-    position: relative; /* Nécessaire pour positionner les pseudo-éléments par rapport au lien */
-    display: inline-block; /* Rend le lien un élément en ligne-bloc */
-    padding: 5px 10px; /* Ajoute du padding autour du texte du lien */
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Ajoute des transitions pour la transformation et la couleur */
-  }
-  
-  /* Pseudo-éléments pour les bordures animées */
-  .nav a:after,
-  .nav a:before {
-    content: ""; /* Ajoute un contenu vide pour les pseudo-éléments */
-    position: absolute; /* Positionne les pseudo-éléments absolument par rapport au lien */
-    display: block; /* Les rend en tant qu'éléments bloc */
-    border: 0px solid transparent; /* Initialise les bordures avec 0px et transparent */
-    width: 0%; /* Initialise la largeur à 0% */
-    height: 0%; /* Initialise la hauteur à 0% */
-    transition: all 0.5s ease; /* Ajoute une transition pour toutes les propriétés */
-  }
-  
-  /* Pseudo-élément after pour les bordures animées */
-  .nav a:after {
-    top: 0; /* Positionne en haut */
-    left: 0; /* Positionne à gauche */
-    border-top: 2px solid transparent; /* Bordure en haut initialement transparente */
-    border-left: 2px solid transparent; /* Bordure à gauche initialement transparente */
-  }
-  
-  /* Pseudo-élément before pour les bordures animées */
-  .nav a:before {
-    right: 0; /* Positionne à droite */
-    bottom: 0; /* Positionne en bas */
-    border-bottom: 2px solid transparent; /* Bordure en bas initialement transparente */
-    border-right: 2px solid transparent; /* Bordure à droite initialement transparente */
-  }
-  
-  /* Effet de survol pour les pseudo-éléments */
-  .nav a:hover::before,
-  .nav a:hover::after {
-    width: 100%; /* Passe la largeur à 100% */
-    height: 100%; /* Passe la hauteur à 100% */
-    border-color: #fff; /* Change la couleur de la bordure à blanc */
-    box-sizing: border-box; /* Assure que les bordures ne changent pas la taille de l'élément */
-  }
-  
-  /* Effet de survol pour le lien */
-  .nav a:hover {
-    text-decoration: none; /* Assure que le soulignement est supprimé au survol */
-    transform: scale(1.1); /* Grossit le texte légèrement */
-    color: #f0f0f0; /* Éclaircit la couleur du texte */
-  }
-  
-/* Styles pour le menu burger */
+  position: absolute; /* Change de absolute à fixed pour que le header reste en haut lors du défilement */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  height: 100px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 100px;
+  margin: 30px;
+}
+
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav li {
+  margin: 0 15px;
+  position: relative;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Lacquer', sans-serif;
+  text-transform: capitalize;
+  font-size: 24px;
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.nav a:after,
+.nav a:before {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 0px solid transparent;
+  width: 0%;
+  height: 0%;
+  transition: all 0.5s ease;
+}
+
+.nav a:after {
+  top: 0;
+  left: 0;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+}
+
+.nav a:before {
+  right: 0;
+  bottom: 0;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+
+.nav a:hover::before,
+.nav a:hover::after {
+  width: 100%;
+  height: 100%;
+  border-color: #fff;
+  box-sizing: border-box;
+}
+
+.nav a:hover {
+  text-decoration: none;
+  transform: scale(1.1);
+  color: #f0f0f0;
+}
+
 .burger {
-    display: none; /* Cache le menu burger par défaut */
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.burgerLine {
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 744px) {
+  .header {
+    width: 80%;
+  }
+
+  .logo img {
+    height: 60px;
+  }
+
+  .nav a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 340px) {
+  .logo img {
+    height: 40px;
+  }
+
+  .nav a {
+    font-size: 16px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav.open {
+    display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    margin-left: auto;
-  }
-  
-  .burgerLine {
+    position: absolute;
+    top: 70px;
+    left: 0;
     width: 100%;
-    height: 4px;
-    background-color: white;
-    transition: all 0.3s ease-in-out;
+    background: rgba(0, 0, 0, 0.9);
   }
-  
-  /* Media queries pour rendre le header responsive */
-  @media (max-width: 744px) {
-    .header {
-        width: 80px;
-    }
-    .logo img {
-      height: 60px; /* Réduire la taille du logo pour les tablettes */
-    }
-  
-    .nav a {
-      font-size: 18px; /* Réduire la taille du texte pour les tablettes */
-    }
+
+  .nav ul {
+    flex-direction: column;
+    width: 100%;
   }
-  
-  @media (max-width: 340px) {
-    .logo img {
-      height: 40px; /* Réduire encore plus la taille du logo pour les mobiles */
-    }
-  
-    .nav a {
-      font-size: 16px; /* Réduire encore plus la taille du texte pour les mobiles */
-    }
-  
-    .nav {
-      display: none; /* Cache la navigation par défaut */
-    }
-  
-    .nav.open {
-      display: flex; /* Affiche la navigation quand le menu est ouvert */
-      flex-direction: column;
-      position: absolute;
-      top: 70px; /* Ajuste selon tes besoins */
-      left: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.9); /* Fond semi-transparent */
-    }
-  
-    .nav ul {
-      flex-direction: column;
-      width: 100%;
-    }
-  
-    .nav li {
-      margin: 10px 0;
-    }
-  
-    .burger {
-      display: flex; /* Affiche le menu burger */
-    }
+
+  .nav li {
+    margin: 10px 0;
   }
+
+  .burger {
+    display: flex;
+  }
+}

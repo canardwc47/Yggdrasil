@@ -9,10 +9,11 @@
   }
   
   .cloud {
-    position: absolute;
-    width: 20%;
+    position: relative;
+    width: 60%;
     height: auto;
     opacity: 0.2;
+    z-index: 500;
   }
   
   .cloud1 {

@@ -1,21 +1,32 @@
 // src/App.jsx
-import { Outlet } from "react-router-dom";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
+import React, { useEffect } from 'react';
 import BackgroundPage from "./components/Background-Page/Background-Page";
-import React from 'react';
+import { NoteAPI } from "./api/note-api";
+import { useDispatch } from "react-redux";
 import style from "./style.module.css";
 
-export function App() {
+const App = () => {
+  const dispatch = useDispatch();
 
-    return <div className="container-fluide">
-    <BackgroundPage />
-    <Header />
-    <div className={style.outlet_container}>
-      <Outlet />
+  const fetchAllNotes = async () => {
+    const mondeList = await NoteAPI.fetchAll();
+    dispatch(setMondesList(mondeList));
+  };
+
+  useEffect(() => {
+    fetchAllNotes();
+  }, [fetchAllNotes, dispatch]);
+
+  return (
+    <div className="container-fluide">
+      <BackgroundPage />
+      <div className={style.outlet_container}>
+        {/* L'Outlet n'est plus nécessaire car les routes sont gérées dans index.js */}
+      </div>
     </div>
-    <Footer />
-    </div>
+  );
 };
 
 export default App;
+
+
