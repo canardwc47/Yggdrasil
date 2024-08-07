@@ -1,6 +1,10 @@
 /* src/index.css */
-
-
+@font-face {
+  font-family: 'Lacquer';
+  src: url('../public/fonts/Lacquer-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 .App {
   text-align: center;
