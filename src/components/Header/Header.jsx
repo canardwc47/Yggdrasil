@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 import styles from '../Header/style.module.css';
 import logo from '../../assets-img/logo.png'; // Assure-toi que le chemin est correct
 
-const Header = () => {
+const Header = ({ position }) => {
+  const headerClass = position === 'absolute' ? styles.headerAbsolute : styles.headerRelative;
+  
   return (
-    <header className={styles.header}>
+    <header className={headerClass}>
       <div className={styles.logo}>
         <img src={logo} alt="Logo" />
       </div>
@@ -23,4 +25,5 @@ const Header = () => {
 };
 
 export default Header;
+
 
