@@ -1,4 +1,4 @@
-const BASE_URL = "yggdrasil.wouafwouaf.ovh/api/monde";
+const BASE_URL = "yggdrasil.wouafwouaf.ovh/api/monde/1";
 
 export class NoteAPI {
   static async fetchAll() {
