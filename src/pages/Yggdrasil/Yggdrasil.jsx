@@ -1,7 +1,7 @@
 // src/pages/Yggdrasil/Yggdrasil.jsx
 import React from 'react';
 import styles from './style.module.css';
-import treeImage from '../../assets-img/Default_je_voudrais_que_tu_me_reprsentes_larbre_yggdrasil_en_v_3-removebg-preview.png';
+import treeImage from '../../assets-img/pixelcut-export (1).png';
 import cloud1 from '../../assets-img/nuage 1 (1).png';
 import cloud2 from '../../assets-img/nuage2 (1).png';
 import cloud3 from '../../assets-img/nuage3 (1).png';
