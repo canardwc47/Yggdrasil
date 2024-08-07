@@ -14,7 +14,7 @@
 
 .footerAbsolute {
   position: absolute;
-  bottom: 100px;
+  bottom: 0;
   width: 95%;
   display: flex;
   justify-content: space-between;
