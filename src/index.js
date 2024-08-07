@@ -25,13 +25,12 @@ const BackgroundWrapper = ({ children }) => {
 const App = ({ component, headerPosition, footerPosition }) => (
   <div style={{ position: 'relative', minHeight: '100vh' }}>
     <Header position={headerPosition} />
-    <div style={{ paddingBottom: '100px', paddingTop: '0px' }}>
+    <div style={{ paddingBottom: '0px', paddingTop: '0px' }}>
       <BackgroundWrapper>
         {component}
       </BackgroundWrapper>
     </div>
     <Footer position={footerPosition} />
-    <div style={{ paddingBottom: '0px', paddingTop: '0px' }}></div>
   </div>
 );
 
