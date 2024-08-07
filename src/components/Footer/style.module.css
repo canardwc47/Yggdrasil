@@ -10,6 +10,7 @@
   color: white; /* Couleur du texte */
   padding: 20px;
   margin: 20px; /* Ajoute une marge autour du footer */
+  margin-bottom: -10px;
 }
 
 .footerAbsolute {

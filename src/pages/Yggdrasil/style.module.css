@@ -10,30 +10,49 @@
 
 .cloud {
   position: absolute;
-  width: 10%;
+  width: 50%; /* Augmenter la taille des nuages */
   height: auto;
-  opacity: 0.2;
+  opacity: 1; /* Supprimer l'opacité */
   z-index: 0; /* Ajustez les z-index pour qu'ils soient inférieurs à ceux du header */
+  animation: moveClouds 20s linear infinite; /* Ajouter une animation */
 }
 
 .cloud1 {
   top: 10%;
-  left: 10%;
+  right: 60%;
+  animation-duration: 20s; /* Durée spécifique de l'animation pour ce nuage */
 }
 
 .cloud2 {
-  top: 20%;
-  right: 20%;
+  top: 60%;
+  left: 60%;
+  animation-duration: 35s; /* Durée spécifique de l'animation pour ce nuage */
+  
 }
 
 .cloud3 {
-  top: 30%;
-  left: 50%;
+  top: 50%;
+  animation-duration: 30s; /* Durée spécifique de l'animation pour ce nuage */
+  left: -30%;
 }
 
 .cloud4 {
-  top: 40%;
-  right: 10%;
+  top: 30%;
+  left: 50%;
+  animation-duration: 25s; /* Durée spécifique de l'animation pour ce nuage */
+}
+
+/* Animation keyframes */
+@keyframes moveClouds {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(30%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .tree {
@@ -44,6 +63,8 @@
   width: 100%;
   height: auto;
   z-index: 0; /* Assurez-vous que le z-index est inférieur à celui du header */
+  margin-bottom: -15px;
+  margin-top: 100px;
 }
 
 .worlds {
