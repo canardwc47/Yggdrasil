@@ -1,7 +1,7 @@
 /* src/index.css */
 @font-face {
   font-family: 'Lacquer';
-  src: url('../../nordik/src/assets-img/lacquer/Lacquer-Regular.ttf') format('truetype');
+  src: url('../../nordik/public/fonts/lacquer/Lacquer-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
