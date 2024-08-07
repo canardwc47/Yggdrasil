@@ -1,6 +1,7 @@
-/* src/components/Header/Header.module.css */
-.header {
-  position: absolute; /* Change de absolute à fixed pour que le header reste en haut lors du défilement */
+/* src/components/Header/style.module.css */
+
+.headerRelative {
+  position: relative;
   width: 100%;
   display: flex;
   align-items: center;
@@ -8,7 +9,24 @@
   z-index: 1000;
   transition: transform 0.3s ease-in-out;
   height: 100px;
+  margin-top: 30px;
+  /* Autres styles ici */
 }
+
+.headerAbsolute {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  height: 100px;
+  margin-top: 30px;
+  /* Autres styles ici */
+}
+
+
 
 .logo {
   display: flex;
