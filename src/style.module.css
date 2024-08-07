@@ -1,10 +1,5 @@
 /* src/index.css */
-@font-face {
-  font-family: 'Lacquer';
-  src: url('../../nordik/public/fonts/Lacquer-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 
 .App {
