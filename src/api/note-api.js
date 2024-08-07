@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5147/mondes";
+const BASE_URL = "http://185.216.27.180:5147/api/mondes";
 
 export class NoteAPI {
   static async fetchAll() {
