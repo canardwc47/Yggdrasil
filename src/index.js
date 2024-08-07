@@ -22,7 +22,7 @@ const BackgroundWrapper = ({ children }) => {
   );
 };
 
-const App = ({ component, headerPosition }) => (
+const App = ({ component, headerPosition, footerPosition }) => (
   <div style={{ position: 'relative', minHeight: '100vh' }}>
     <Header position={headerPosition} />
     <div style={{ paddingBottom: '100px', paddingTop: '0px' }}>
@@ -30,7 +30,8 @@ const App = ({ component, headerPosition }) => (
         {component}
       </BackgroundWrapper>
     </div>
-    <Footer />
+    <Footer position={footerPosition} />
+    <div style={{ paddingBottom: '0px', paddingTop: '0px' }}></div>
   </div>
 );
 
@@ -40,16 +41,17 @@ const Root = () => (
   <Router>
     <div style={{ position: 'relative', minHeight: '100px' }}>
       <Routes>
-        <Route path="/" element={<App component={<Yggdrasil />} headerPosition="absolute" />} />
-        <Route path="/les-mondes" element={<App component={<LesMondes />} headerPosition="relative" />} />
-        <Route path="/les-dieux" element={<App component={<LesDieux />} headerPosition="relative" />} />
-        <Route path="/les-monstres" element={<App component={<LesMonstres />} headerPosition="relative" />} />
+        <Route path="/" element={<App component={<Yggdrasil />} headerPosition="absolute" footerPosition="absolute" />} />
+        <Route path="/les-mondes" element={<App component={<LesMondes />} headerPosition="relative" footerPosition="relative" />} />
+        <Route path="/les-dieux" element={<App component={<LesDieux />} headerPosition="relative" footerPosition="relative" />} />
+        <Route path="/les-monstres" element={<App component={<LesMonstres />} headerPosition="relative" footerPosition="relative" />} />
       </Routes>
     </div>
   </Router>
 );
 
 ReactDOM.render(<Root />, document.getElementById('root'));
+
 
 
 
