@@ -1,4 +1,4 @@
-const BASE_URL = "https://yggdrasil.wouafwouaf.ovh/api/mondes";
+const BASE_URL = "http://localhost:3200/api/mondes"; // Utilisez le port sur lequel votre API est en cours d'exécution
 
 export class WorldAPI {
   static async fetchAllWorlds() {
@@ -14,5 +14,6 @@ export class WorldAPI {
       });
   }
 }
+
 
 

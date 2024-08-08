@@ -13,9 +13,8 @@ const TextMonde = ({ id }) => {
       setLoading(true);
       setError(null);
       try {
-        const data = await WorldAPI.fetchAllWorlds(); // Utilisation de fetchAllWorlds
-        const monde = data.find(m => m.id === id); // Filtrer pour obtenir le monde avec l'ID spécifique
-        setMonde(monde);
+        const data = await WorldAPI.fetchWorldById(id); // Utilisation de la méthode correcte
+        setMonde(data);
       } catch (error) {
         setError(error.message);
       } finally {
@@ -50,7 +49,6 @@ const TextMonde = ({ id }) => {
 };
 
 export default TextMonde;
-
 
 
 
