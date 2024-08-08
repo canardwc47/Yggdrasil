@@ -22,7 +22,6 @@ const getMondes = () => {
 
 // Routes API
 app.get('/api/mondes', (req, res) => {
-  console.log("Received request for /api/mondes");
   const mondes = getMondes();
   res.json(mondes);
 });
@@ -43,5 +42,3 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-app.listen(PORT, () => {
-});
