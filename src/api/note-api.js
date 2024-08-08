@@ -1,4 +1,4 @@
-const BASE_URL = "yggdrasil.wouafwouaf.ovh/api/monde/1";
+const BASE_URL = "http://yggdrasil.wouafwouaf.ovh/api/mondes"; // Assurez-vous que c'est l'URL correcte
 
 export class NoteAPI {
   static async fetchAll() {
@@ -45,4 +45,5 @@ NoteAPI.fetchAll().then((data) => {
 NoteAPI.fetchById(1).then((data) => {
   console.log("World with ID 1:", data);
 });
+
 

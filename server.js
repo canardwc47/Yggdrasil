@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5147;
 
 // Configure CORS
 app.use(cors({
-  origin: 'http://185.216.27.180:5147'
+  origin: 'https://yggdrasil.wouafwouaf.ovh'
 }));
 
 // Servir les fichiers statiques du dossier 'build'
