@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { WorldAPI } from '../../api/note-api';
+import { WorldAPI } from '../../src/api/note-api';
 
 const WorldsComponent = () => {
   const [worlds, setWorlds] = useState([]);
