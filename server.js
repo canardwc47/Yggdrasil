@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5147;
 
 // Configure CORS
 app.use(cors({
-  origin: 'https://yggdrasil.wouafwouaf.ovh/api/mondes' // Utilisez * temporairement pour tester, remplacez par l'origine correcte plus tard
+  origin: '*' // Utilisez * temporairement pour tester, remplacez par l'origine correcte plus tard
 }));
 
 // Charger les mondes depuis db.json
@@ -37,7 +37,7 @@ app.get('/api/mondes/:id', (req, res) => {
 app.use(express.static(path.join(__dirname, 'build')));
 
 // Pour toutes les autres requêtes, retourner le fichier 'index.html' du dossier 'build'
-app.get('https://yggdrasil.wouafwouaf.ovh/api/mondes', (req, res) => {
+app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
