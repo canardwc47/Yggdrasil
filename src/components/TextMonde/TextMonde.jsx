@@ -1,6 +1,6 @@
 // TextMonde.jsx
 import React, { useState, useEffect } from 'react';
-import { WorldAPI } from '../../src/api/note-api'; // Assurez-vous que le chemin et le nom de l'import sont corrects
+import { WorldAPI } from '../../api/note-api'; // Assurez-vous que le chemin et le nom de l'import sont corrects
 import S from './style.module.css'; // Chemin d'importation relatif au fichier TextMonde.jsx
 
 const TextMonde = ({ id }) => {
