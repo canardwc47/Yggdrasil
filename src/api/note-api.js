@@ -1,4 +1,4 @@
-const BASE_URL = "http://yggdrasil.wouafwouaf.ovh/api/mondes";
+const BASE_URL = "https://yggdrasil.wouafwouaf.ovh/api/mondes";
 
 export class WorldAPI {
   static async fetchAllWorlds() {
