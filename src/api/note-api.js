@@ -1,35 +1,53 @@
-const BASE_URL = "https://yggdrasil.wouafwouaf.ovh/api/mondes"; // Assurez-vous que c'est l'URL correcte
+const BASE_URL = "https://yggdrasil.wouafwouaf.ovh/api/mondes"; // Assurez-vous que l'URL est correcte
 
-export class NoteAPI {
-  static async fetchAll() {
+export class WorldAPI {  // Renommé pour être plus descriptif
+  static async fetchAllWorlds() {
     return fetch(BASE_URL)
       .then(response => {
+        console.log("Response:", response);
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
-        return response.json();
+        return response.text().then(text => {
+          console.log("Response Text:", text); // Log le texte brut de la réponse
+          try {
+            return JSON.parse(text);
+          } catch (error) {
+            console.error("Error parsing JSON:", error, "Response text:", text);
+            throw new Error("Invalid JSON");
+          }
+        });
       })
       .then((data) => {
         return data;
       })
       .catch((error) => {
-        console.error("There was a problem with the fetch operation:", error);
+        console.error("There was a problem with the fetchAllWorlds operation:", error);
       });
   }
 
-  static async fetchById(id) {
+  static async fetchWorldById(id) {
     return fetch(`${BASE_URL}/${id}`)
       .then(response => {
+        console.log("Response:", response);
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
-        return response.json();
+        return response.text().then(text => {
+          console.log("Response Text:", text); // Log le texte brut de la réponse
+          try {
+            return JSON.parse(text);
+          } catch (error) {
+            console.error("Error parsing JSON:", error, "Response text:", text);
+            throw new Error("Invalid JSON");
+          }
+        });
       })
       .then((data) => {
         return data;
       })
       .catch((error) => {
-        console.error("There was a problem with the fetch operation:", error);
+        console.error(`There was a problem with the fetchWorldById operation for ID ${id}:`, error);
       });
   }
 }
@@ -37,13 +55,14 @@ export class NoteAPI {
 // Example usage:
 
 // Fetch all worlds
-NoteAPI.fetchAll().then((data) => {
+WorldAPI.fetchAllWorlds().then((data) => {  // Utilisation du nouveau nom de classe
   console.log("All worlds:", data);
 });
 
 // Fetch a world by ID
-NoteAPI.fetchById(1).then((data) => {
+WorldAPI.fetchWorldById(1).then((data) => {  // Utilisation du nouveau nom de classe
   console.log("World with ID 1:", data);
 });
+
 
 
