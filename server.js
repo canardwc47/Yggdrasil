@@ -14,7 +14,7 @@ app.use(cors({
 // Servir les fichiers statiques du dossier 'build'
 app.use(express.static(path.join(__dirname, 'build')));
 
-// Charger les notes depuis db.json
+// Charger les mondes depuis db.json
 const getMondes = () => {
     const data = fs.readFileSync(path.join(__dirname, 'db.json'));
     return JSON.parse(data);
@@ -29,9 +29,9 @@ app.get('/api/mondes', (req, res) => {
 
 // Route pour un monde par ID
 app.get('/api/mondes/:id', (req, res) => {
-  console.log(`Received request for /api/mondes/${req.params.id}`);
-  const mondes = getMondes().mondes;
-  const monde = mondes.find(m => m.id === req.params.id);
+  console.log(Received request for /api/mondes/${req.params.id});
+  const mondes = getMondes();
+  const monde = mondes.find(m => m.id === parseInt(req.params.id, 10));
   if (monde) {
     res.json(monde);
   } else {
@@ -45,6 +45,5 @@ app.get('*', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(Server is running on port ${PORT});
 });
-
