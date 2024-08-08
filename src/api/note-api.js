@@ -1,38 +1,57 @@
-import React, { useEffect, useState } from 'react';
-import { WorldAPI } from '../../src/api/note-api';
+const BASE_URL = "http://yggdrasil.wouafwouaf.ovh/api/mondes";
 
-const WorldsComponent = () => {
-  const [worlds, setWorlds] = useState([]);
-  const [world, setWorld] = useState(null);
+export class WorldAPI {
+  static async fetchAllWorlds() {
+    return fetch(BASE_URL)
+      .then(response => {
+        console.log("Response:", response);
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.text().then(text => {
+          console.log("Response Text:", text);
+          try {
+            return JSON.parse(text);
+          } catch (error) {
+            console.error("Error parsing JSON:", error, "Response text:", text);
+            throw new Error("Invalid JSON");
+          }
+        });
+      })
+      .then((data) => {
+        return data;
+      })
+      .catch((error) => {
+        console.error("There was a problem with the fetchAllWorlds operation:", error);
+      });
+  }
 
-  useEffect(() => {
-    // Fetch all worlds
-    WorldAPI.fetchAllWorlds().then((data) => {
-      setWorlds(data.mondes);
-    });
+  static async fetchWorldById(id) {
+    return fetch(`${BASE_URL}/${id}`)
+      .then(response => {
+        console.log("Response:", response);
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.text().then(text => {
+          console.log("Response Text:", text);
+          try {
+            return JSON.parse(text);
+          } catch (error) {
+            console.error("Error parsing JSON:", error, "Response text:", text);
+            throw new Error("Invalid JSON");
+          }
+        });
+      })
+      .then((data) => {
+        return data;
+      })
+      .catch((error) => {
+        console.error(`There was a problem with the fetchWorldById operation for ID ${id}:`, error);
+      });
+  }
+}
 
-    // Fetch a world by ID
-    WorldAPI.fetchWorldById(1).then((data) => {
-      setWorld(data);
-    });
-  }, []);
-
-  return (
-    <div>
-      <h1>All Worlds</h1>
-      <ul>
-        {worlds.map((world) => (
-          <li key={world.id}>{world.title}</li>
-        ))}
-      </ul>
-
-      <h1>World with ID 1</h1>
-      {world && <div>{world.title}</div>}
-    </div>
-  );
-};
-
-export default WorldsComponent;
 
 
 
