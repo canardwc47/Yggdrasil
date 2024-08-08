@@ -1,4 +1,4 @@
-const BASE_URL = "http://yggdrasil.wouafwouaf.ovh/api/mondes"; // Assurez-vous que c'est l'URL correcte
+const BASE_URL = "https://yggdrasil.wouafwouaf.ovh/api/mondes"; // Assurez-vous que c'est l'URL correcte
 
 export class NoteAPI {
   static async fetchAll() {
