@@ -1,6 +1,6 @@
 // src/index.js
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './style.module.css';
 
@@ -34,8 +34,6 @@ const App = ({ component, headerPosition, footerPosition }) => (
   </div>
 );
 
-export default App;
-
 const Root = () => (
   <Router>
     <div style={{ position: 'relative', minHeight: '100px' }}>
@@ -49,7 +47,21 @@ const Root = () => (
   </Router>
 );
 
-ReactDOM.render(<Root />, document.getElementById('root'));
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
+
+root.render(
+  <React.StrictMode>
+    <Root />
+  </React.StrictMode>
+);
+
+
+
+
+
+
+
 
 
 

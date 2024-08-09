@@ -1,7 +1,7 @@
 // src/App.jsx
 import React, { useEffect } from 'react';
 import BackgroundPage from "./components/Background-Page/Background-Page";
-import { NoteAPI } from "./api/note-api";
+import { NoteAPI } from "./api/world-API";
 import { useDispatch } from "react-redux";
 import style from "./style.module.css";
 
@@ -28,5 +28,7 @@ const App = () => {
 };
 
 export default App;
+
+
 
 
