@@ -1,7 +1,7 @@
 // TextMonde.jsx
 import React, { useState, useEffect } from 'react';
-import { WorldAPI } from '../../api/note-api'; // Assurez-vous que le chemin et le nom de l'import sont corrects
-import S from './style.module.css'; // Chemin d'importation relatif au fichier TextMonde.jsx
+import { WorldAPI } from '../../api/world-API';
+import S from './style.module.css';
 
 const TextMonde = ({ id }) => {
   const [monde, setMonde] = useState(null);
@@ -13,8 +13,9 @@ const TextMonde = ({ id }) => {
       setLoading(true);
       setError(null);
       try {
-        const data = await WorldAPI.fetchWorldById(id); // Utilisation de la méthode correcte
-        setMonde(data);
+        const data = await WorldAPI.fetchAllWorld();
+        const mondeData = data.mondes.find(m => m.id === id.toString()); // Filtrer pour obtenir le monde par ID
+        setMonde(mondeData);
       } catch (error) {
         setError(error.message);
       } finally {
@@ -49,6 +50,9 @@ const TextMonde = ({ id }) => {
 };
 
 export default TextMonde;
+
+
+
 
 
 
