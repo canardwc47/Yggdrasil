@@ -11,20 +11,20 @@ export class WorldAPI {
     })
   }
 
-  // static async fetchWorldById(id) {
-  //   try {
-  //     const response = await fetch(`${BASE_URL}/${id}`);
-  //     if (!response.ok) {
-  //       throw new Error(`HTTP error! status: ${response.status}`);
-  //     }
-  //     const data = await response.json();
-  //     console.log(data);
-  //     return data;
-  //   } catch (error) {
-  //     console.error(`Error fetching world with id ${id}:`, error);
-  //     return null;
-  //   }
-  // }
+   static async fetchWorldById(id) {
+     try {
+       const response = await fetch(`${BASE_URL}/${id}`);
+       if (!response.ok) {
+         throw new Error(`HTTP error! status: ${response.status}`);
+       }
+       const data = await response.json();
+       console.log(data);
+       return data;
+    } catch (error) {
+      console.error(`Error fetching world with id ${id}:`, error);
+      return null;
+    }
+ }
 }
 
 
