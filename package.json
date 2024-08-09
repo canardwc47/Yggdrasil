@@ -22,13 +22,13 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "cross-env PORT=5000 react-scripts start",
+    "start": "cross-env PORT=5147 react-scripts start",
     "build": "react-scripts build",
     "prod": "node server.js",
     "heroku-postbuild": "npm run build",
     "client": "react-scripts start",
     "server": "node server.js",
-    "json-server": "json-server --watch ./db.json --port 3200"
+    "json-server": "json-server --watch ./db.json --port 5147"
   },
   "engines": {
     "node": "16.16.0"
