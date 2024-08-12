@@ -64,7 +64,7 @@
       "habitants": ["hel", "fenrir"]
     }
   ],
-  
+
   "habitants": [
     {
       "id": "odin",
@@ -74,7 +74,7 @@
       "symboles": ["corbeaux (Hugin et Muninn)", "loups (Geri et Freki)", "lance Gungnir", "cheval à huit jambes Sleipnir"],
       "lieu_de_vie": "Asgard",
       "categorie": "Ases",
-      "image": "url_de_l_image"
+      "image": "https://imgur.com/undefined"
     },
     {
       "id": "thor",
