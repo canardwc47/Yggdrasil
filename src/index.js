@@ -1,7 +1,7 @@
 // src/index.js
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import './style.module.css';
 
 import Yggdrasil from './pages/Yggdrasil/Yggdrasil';
@@ -39,7 +39,8 @@ const Root = () => (
     <div style={{ position: 'relative', minHeight: '100px' }}>
       <Routes>
         <Route path="/" element={<App component={<Yggdrasil />} headerPosition="absolute" footerPosition="absolute" />} />
-        <Route path="/les-mondes" element={<App component={<LesMondes />} headerPosition="relative" footerPosition="relative" />} />
+        <Route path="/les-mondes" element={<Navigate to="/les-mondes/1" replace />} /> {/* Redirige vers Asgard */}
+        <Route path="/les-mondes/:id" element={<App component={<LesMondes />} headerPosition="relative" footerPosition="relative" />} />
         <Route path="/les-dieux" element={<App component={<LesDieux />} headerPosition="relative" footerPosition="relative" />} />
         <Route path="/les-monstres" element={<App component={<LesMonstres />} headerPosition="relative" footerPosition="relative" />} />
       </Routes>
@@ -55,6 +56,11 @@ root.render(
     <Root />
   </React.StrictMode>
 );
+
+
+
+
+
 
 
 
