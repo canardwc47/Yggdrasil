@@ -1,15 +1,16 @@
-// LesMondes.js
+// LesMondes.jsx
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import TextMonde from '../../components/TextMonde/TextMonde';
+import NavBarMonde from '../../components/NavBarMondes/NavBarMondes';
 
 const LesMondes = () => {
-  const mondeIds = [1, 2]; // IDs des mondes que vous souhaitez afficher
+  const { id } = useParams(); // Récupère l'ID du monde à partir de l'URL
 
   return (
     <div>
-      {mondeIds.map(id => (
-        <TextMonde key={id} id={id} />
-      ))}
+      <NavBarMonde /> {/* Affiche la barre de navigation des mondes */}
+      <TextMonde id={id} /> {/* Affiche le monde correspondant */}
     </div>
   );
 };

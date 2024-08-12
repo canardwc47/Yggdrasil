@@ -1,33 +1,36 @@
 /* TextMonde.css */
 .MondeContainer {
-    text-align: center;
-    padding: 20px;
-    font-family: 'Arial, sans-serif';
-    color: #fff;
-    background-color: #2d2d2d; /* Adjust the background color as needed */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 800px;
-    margin: 20px auto;
-  }
-  
-  .monde-title {
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
-  
-  .monde-image-container {
-    margin-bottom: 20px;
-  }
-  
-  .monde-image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  .monde-content {
-    font-size: 1.2em;
-    line-height: 1.6;
-  }
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.mondeTitle {
+  font-family: 'LBA';
+  font-weight: normal;
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.mondeImageContainer {
+  display: flex;
+  justify-content: center; /* Centre l'image horizontalement */
+  margin-bottom: 20px;
+}
+
+.mondeImage {
+  max-width: 200%; /* Limite la largeur maximale de l'image */
+  width: 130%; /* Ajustez cette valeur pour agrandir ou réduire l'image */
+  height: auto; /* Maintient le ratio de l'image */
+  border-radius: 10px;
+}
+
+.mondeContent {
+  font-family: 'Lacquer' !important;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
   
