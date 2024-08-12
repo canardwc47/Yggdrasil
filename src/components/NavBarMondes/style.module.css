@@ -1,27 +1,37 @@
-/* NavBarMonde.css */
-nav {
-    background-color: #333;
-    padding: 10px;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
-    margin: 0 15px;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  nav ul li a:hover {
-    text-decoration: underline;
-  }
+/* style.module.css */
+.navContainer {
+  background-color: transparent;
+  padding: 100px; /* Suppression du padding pour un gap de 0 avec le header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  gap: 40px; /* Espacement entre les éléments de la navbar */
+}
+
+.navItem {
+  margin: 0;
+}
+
+.navLink {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'LBA', sans-serif;
+  font-size: 24px;
+}
+
+.navLink:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+
+
   
