@@ -1,25 +1,43 @@
 // NavBarMonde.jsx
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import S from './style.module.css'; // Importation des styles avec "S"
 
 const NavBarMonde = () => {
+  const { id } = useParams(); // Récupère l'ID du monde actuel à partir de l'URL
+
+  const mondes = [
+    { id: "1", name: "Asgard" },
+    { id: "2", name: "Midgard" },
+    { id: "3", name: "Vanaheim" },
+    { id: "4", name: "Jotunheim" },
+    { id: "5", name: "Alfheim" },
+    { id: "6", name: "Nidavellir" },
+    { id: "7", name: "Muspelheim" },
+    { id: "8", name: "Niflheim" },
+    { id: "9", name: "Helheim" }
+  ];
+
   return (
-    <nav>
-      <ul>
-        <li><Link to="/les-mondes/1">Asgard</Link></li>
-        <li><Link to="/les-mondes/2">Midgard</Link></li>
-        <li><Link to="/les-mondes/3">Vanaheim</Link></li>
-        <li><Link to="/les-mondes/4">Jotunheim</Link></li>
-        <li><Link to="/les-mondes/5">Alfheim</Link></li>
-        <li><Link to="/les-mondes/6">Nidavellir</Link></li>
-        <li><Link to="/les-mondes/7">Muspelheim</Link></li>
-        <li><Link to="/les-mondes/8">Niflheim</Link></li>
-        <li><Link to="/les-mondes/9">Helheim</Link></li>
+    <nav className={S.navContainer}>
+      <ul className={S.navList}>
+        {mondes
+          .filter(monde => monde.id !== id) // Filtre pour ne pas afficher le monde actuellement sélectionné
+          .map(monde => (
+            <li key={monde.id} className={S.navItem}>
+              <Link to={`/les-mondes/${monde.id}`} className={S.navLink}>
+                {monde.name}
+              </Link>
+            </li>
+          ))}
       </ul>
     </nav>
   );
 };
 
 export default NavBarMonde;
+
+
+
 
 
