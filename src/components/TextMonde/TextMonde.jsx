@@ -1,7 +1,7 @@
 // TextMonde.jsx
 import React, { useState, useEffect } from 'react';
 import { WorldAPI } from '../../api/world-API';
-import S from './style.module.css';
+import S from '../TextMonde/style.module.css';
 
 const TextMonde = ({ id }) => {
   const [monde, setMonde] = useState(null);
@@ -40,16 +40,31 @@ const TextMonde = ({ id }) => {
 
   return (
     <div className={S.MondeContainer}>
-      <h1 className="monde-title">{monde.title}</h1>
-      <div className="monde-image-container">
-        {monde.image && <img src={monde.image} alt={monde.title} style={{ width: '100%', height: 'auto' }} />}
+      <h1 className={S.mondeTitle}>{monde.title}</h1>
+      <div className={S.mondeImageContainer}>
+        {monde.image && <img src={monde.image} alt={monde.title} className={S.mondeImage} />}
       </div>
-      <p className="monde-content">{monde.content}</p>
+      <p className={S.mondeContent}>{monde.content}</p>
     </div>
   );
 };
 
+// L'export doit se trouver ici
 export default TextMonde;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
