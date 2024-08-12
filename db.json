@@ -9,61 +9,62 @@
     },
     {
       "title": "Midgard",
-      "content": "Midgard est le royaume des hommes, une terre située au centre de l'arbre cosmique Yggdrasil, entourée par un vaste océan gardé par le serpent Jörmungandr...",
+      "content": "Midgard est le royaume des hommes, une terre située au centre de l'arbre cosmique Yggdrasil, entourée par un vaste océan gardé par le serpent Jörmungandr. Ce monde est le domaine de l'humanité, une région de plaines fertiles, de forêts profondes, et de villes animées où les hommes vivent, luttent, et prospèrent. Midgard est également le théâtre de nombreux conflits, influencés par les forces surnaturelles des autres mondes. C'est le point d'intersection entre les royaumes célestes et terrestres, relié à Asgard par le pont arc-en-ciel Bifröst.",
       "image": "",
       "id": "2",
       "habitants": ["kvasir"]
     },
     {
       "title": "Vanaheim",
-      "content": "Vanaheim est le royaume des Vanes, une ancienne race de dieux associés à la fertilité, la nature et la sagesse. Ce monde est un lieu de paix, de prospérité et d'abondance, avec des paysages luxuriants, des forêts enchantées et des rivières débordant de vie...",
+      "content": "Vanaheim est le royaume des Vanes, une ancienne race de dieux associés à la fertilité, la nature, et la sagesse. Ce monde est un lieu de paix, de prospérité et d'abondance, avec des paysages luxuriants, des forêts enchantées et des rivières débordant de vie. Les Vanes, en harmonie avec la nature, sont réputés pour leurs pouvoirs de prophétie et leur capacité à influencer les forces naturelles. Vanaheim est souvent décrit comme un paradis terrestre, où règnent l'harmonie et l'équilibre entre toutes les formes de vie.",
       "image": "",
       "id": "3",
       "habitants": ["njord", "freyr", "freyja", "nerthus", "gullveig"]
     },
     {
       "title": "Jotunheim",
-      "content": "Jotunheim est le royaume des géants (Jotuns), un territoire sauvage et indompté, dominé par des montagnes abruptes, des forêts denses et des vallées brumeuses...",
+      "content": "Jotunheim est le royaume des géants (Jotuns), un territoire sauvage et indompté, dominé par des montagnes abruptes, des forêts denses, et des vallées brumeuses. Ce monde est le domaine des forces de la nature dans leur forme la plus brute, où les géants vivent en opposition fréquente avec les dieux d'Asgard. Jotunheim est un lieu de chaos et de puissance primordiale, où le climat est hostile et les ressources naturelles abondantes mais difficilement accessibles. Les géants qui y habitent incarnent la force brute, la sauvagerie, et l'esprit indomptable.",
       "image": "",
       "id": "4",
       "habitants": ["ymir", "skadi", "jormungandr", "hrymr", "loki"]
     },
     {
       "title": "Alfheim",
-      "content": "Alfheim est le royaume des elfes de lumière, des êtres éthérés et immortels, associés à la beauté, à la magie et à la lumière...",
+      "content": "Alfheim est le royaume des elfes de lumière, des êtres éthérés et immortels, associés à la beauté, à la magie, et à la lumière. Ce monde est un paradis de lumière et de pureté, où les paysages sont éternellement baignés dans une lueur douce et éclatante. Les elfes de lumière sont des créatures gracieuses et bienveillantes, dotées d'une grande sagesse et de pouvoirs magiques. Alfheim est un lieu de paix et de sérénité, souvent décrit comme un havre de paix où la beauté naturelle est préservée dans toute sa splendeur.",
       "image": "",
       "id": "5",
       "habitants": ["light_elf_king"]
     },
     {
       "title": "Nidavellir",
-      "content": "Nidavellir, aussi appelé Svartalfheim, est le royaume des elfes sombres, ou nains, des créatures habiles et secrètes, maîtres de la forge et de l'artisanat...",
+      "content": "Nidavellir, aussi appelé Svartalfheim, est le royaume des elfes sombres, ou nains, des créatures habiles et secrètes, maîtres de la forge et de l'artisanat. Ce monde souterrain est un labyrinthe de cavernes profondes, de tunnels obscurs, et de vastes forges où les nains créent des armes et des artefacts d'une grande puissance. Nidavellir est un lieu de secrets et de mystères, où la lumière est rare et l'air est épais de fumée de forge. Les nains qui y vivent sont réputés pour leur expertise dans la création d'objets magiques, essentiels à l'équilibre des mondes.",
       "image": "",
       "id": "6",
       "habitants": ["brokkr", "sindri"]
     },
     {
       "title": "Muspelheim",
-      "content": "Muspelheim est le royaume du feu et de la chaleur, une terre ardente habitée par les géants de feu, sous la domination de Surt...",
+      "content": "Muspelheim est le royaume du feu et de la chaleur, une terre ardente habitée par les géants de feu, sous la domination de Surt. Ce monde est une étendue volcanique, marquée par des rivières de lave, des montagnes en fusion, et un ciel toujours enflammé. Muspelheim est le domaine du feu primordial, un élément destructeur mais aussi créateur, symbolisant à la fois la fin et le renouveau. Les géants de feu qui y résident sont les gardiens de cette force dévastatrice, destinée à jouer un rôle crucial lors du Ragnarök, l'apocalypse prophétique.",
       "image": "",
       "id": "7",
       "habitants": ["surt"]
     },
     {
       "title": "Niflheim",
-      "content": "Niflheim est le royaume de glace et de brouillard, une terre de froid éternel et de ténèbres...",
+      "content": "Niflheim est le royaume de glace et de brouillard, une terre de froid éternel et de ténèbres. Ce monde est une étendue glaciale, dominée par des glaciers massifs, des vents hurlants, et des rivières gelées. Niflheim est l'une des régions les plus anciennes du cosmos, et abrite la source primordiale Hvergelmir, d'où jaillissent les rivières glacées qui alimentent l'univers. Ce royaume représente l'entropie, le froid et la stagnation, en opposition à la chaleur et à la vitalité des autres mondes. Les habitants de Niflheim, comme le dragon Níðhöggr, incarnent les forces de la destruction et du chaos.",
       "image": "",
       "id": "8",
       "habitants": ["nidhogg"]
     },
     {
       "title": "Helheim",
-      "content": "Helheim est le royaume sombre des morts dans la mythologie nordique, caractérisé par ses paysages lugubres, ses vastes plaines glaciales et son atmosphère froide et désolée...",
+      "content": "Helheim est le royaume sombre des morts dans la mythologie nordique, caractérisé par ses paysages lugubres, ses vastes plaines glaciales et son atmosphère froide et désolée. Ce monde est gouverné par Hel, la déesse des morts, et abrite les âmes de ceux qui ne sont pas morts au combat, mais de vieillesse ou de maladie. Helheim est une terre de tristesse et de désespoir, une sombre réflexion sur la mortalité et la fin inévitable de toutes choses. Ce royaume est souvent perçu comme un lieu d'attente avant le Ragnarök, où les morts se rassemblent en prévision de la fin du monde.",
       "image": "/assets-img/Helheim.webp",
       "id": "9",
       "habitants": ["hel", "fenrir"]
     }
   ],
+  
   "habitants": [
     {
       "id": "odin",
