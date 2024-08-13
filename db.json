@@ -10,56 +10,56 @@
     {
       "title": "Midgard",
       "content": "Midgard est le royaume des hommes, une terre située au centre de l'arbre cosmique Yggdrasil, entourée par un vaste océan gardé par le serpent Jörmungandr. Ce monde est le domaine de l'humanité, une région de plaines fertiles, de forêts profondes, et de villes animées où les hommes vivent, luttent, et prospèrent. Midgard est également le théâtre de nombreux conflits, influencés par les forces surnaturelles des autres mondes. C'est le point d'intersection entre les royaumes célestes et terrestres, relié à Asgard par le pont arc-en-ciel Bifröst.",
-      "image": "",
+      "image": "https://i.imgur.com/Gbk6aVw.jpeg",
       "id": "2",
       "habitants": ["kvasir"]
     },
     {
       "title": "Vanaheim",
       "content": "Vanaheim est le royaume des Vanes, une ancienne race de dieux associés à la fertilité, la nature, et la sagesse. Ce monde est un lieu de paix, de prospérité et d'abondance, avec des paysages luxuriants, des forêts enchantées et des rivières débordant de vie. Les Vanes, en harmonie avec la nature, sont réputés pour leurs pouvoirs de prophétie et leur capacité à influencer les forces naturelles. Vanaheim est souvent décrit comme un paradis terrestre, où règnent l'harmonie et l'équilibre entre toutes les formes de vie.",
-      "image": "",
+      "image": "https://i.imgur.com/0xUpZw3.jpeg",
       "id": "3",
       "habitants": ["njord", "freyr", "freyja", "nerthus", "gullveig"]
     },
     {
       "title": "Jotunheim",
       "content": "Jotunheim est le royaume des géants (Jotuns), un territoire sauvage et indompté, dominé par des montagnes abruptes, des forêts denses, et des vallées brumeuses. Ce monde est le domaine des forces de la nature dans leur forme la plus brute, où les géants vivent en opposition fréquente avec les dieux d'Asgard. Jotunheim est un lieu de chaos et de puissance primordiale, où le climat est hostile et les ressources naturelles abondantes mais difficilement accessibles. Les géants qui y habitent incarnent la force brute, la sauvagerie, et l'esprit indomptable.",
-      "image": "",
+      "image": "https://i.imgur.com/7mlpgne.jpeg",
       "id": "4",
       "habitants": ["ymir", "skadi", "jormungandr", "hrymr", "loki"]
     },
     {
       "title": "Alfheim",
       "content": "Alfheim est le royaume des elfes de lumière, des êtres éthérés et immortels, associés à la beauté, à la magie, et à la lumière. Ce monde est un paradis de lumière et de pureté, où les paysages sont éternellement baignés dans une lueur douce et éclatante. Les elfes de lumière sont des créatures gracieuses et bienveillantes, dotées d'une grande sagesse et de pouvoirs magiques. Alfheim est un lieu de paix et de sérénité, souvent décrit comme un havre de paix où la beauté naturelle est préservée dans toute sa splendeur.",
-      "image": "",
+      "image": "https://i.imgur.com/u0vgi0C.jpeg",
       "id": "5",
       "habitants": ["light_elf_king"]
     },
     {
       "title": "Nidavellir",
       "content": "Nidavellir, aussi appelé Svartalfheim, est le royaume des elfes sombres, ou nains, des créatures habiles et secrètes, maîtres de la forge et de l'artisanat. Ce monde souterrain est un labyrinthe de cavernes profondes, de tunnels obscurs, et de vastes forges où les nains créent des armes et des artefacts d'une grande puissance. Nidavellir est un lieu de secrets et de mystères, où la lumière est rare et l'air est épais de fumée de forge. Les nains qui y vivent sont réputés pour leur expertise dans la création d'objets magiques, essentiels à l'équilibre des mondes.",
-      "image": "",
+      "image": "https://i.imgur.com/aBnUlMj.jpeg",
       "id": "6",
       "habitants": ["brokkr", "sindri"]
     },
     {
       "title": "Muspelheim",
       "content": "Muspelheim est le royaume du feu et de la chaleur, une terre ardente habitée par les géants de feu, sous la domination de Surt. Ce monde est une étendue volcanique, marquée par des rivières de lave, des montagnes en fusion, et un ciel toujours enflammé. Muspelheim est le domaine du feu primordial, un élément destructeur mais aussi créateur, symbolisant à la fois la fin et le renouveau. Les géants de feu qui y résident sont les gardiens de cette force dévastatrice, destinée à jouer un rôle crucial lors du Ragnarök, l'apocalypse prophétique.",
-      "image": "",
+      "image": "https://i.imgur.com/AwaXIOX.jpeg",
       "id": "7",
       "habitants": ["surt"]
     },
     {
       "title": "Niflheim",
       "content": "Niflheim est le royaume de glace et de brouillard, une terre de froid éternel et de ténèbres. Ce monde est une étendue glaciale, dominée par des glaciers massifs, des vents hurlants, et des rivières gelées. Niflheim est l'une des régions les plus anciennes du cosmos, et abrite la source primordiale Hvergelmir, d'où jaillissent les rivières glacées qui alimentent l'univers. Ce royaume représente l'entropie, le froid et la stagnation, en opposition à la chaleur et à la vitalité des autres mondes. Les habitants de Niflheim, comme le dragon Níðhöggr, incarnent les forces de la destruction et du chaos.",
-      "image": "",
+      "image": "https://i.imgur.com/Pte1mz9.jpeg",
       "id": "8",
       "habitants": ["nidhogg"]
     },
     {
       "title": "Helheim",
       "content": "Helheim est le royaume sombre des morts dans la mythologie nordique, caractérisé par ses paysages lugubres, ses vastes plaines glaciales et son atmosphère froide et désolée. Ce monde est gouverné par Hel, la déesse des morts, et abrite les âmes de ceux qui ne sont pas morts au combat, mais de vieillesse ou de maladie. Helheim est une terre de tristesse et de désespoir, une sombre réflexion sur la mortalité et la fin inévitable de toutes choses. Ce royaume est souvent perçu comme un lieu d'attente avant le Ragnarök, où les morts se rassemblent en prévision de la fin du monde.",
-      "image": "/assets-img/Helheim.webp",
+      "image": "https://i.imgur.com/VaknRSZ.jpeg",
       "id": "9",
       "habitants": ["hel", "fenrir"]
     }
@@ -84,7 +84,7 @@
       "symboles": ["marteau Mjöllnir", "chariot tiré par des boucs"],
       "lieu_de_vie": "Asgard",
       "categorie": "Ases",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/zd8TMMx.png"
     },
     {
       "id": "heimdall",
@@ -94,7 +94,7 @@
       "symboles": ["corne Gjallarhorn"],
       "lieu_de_vie": "Asgard",
       "categorie": "Ases",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/gWthT1A.png"
     },
     {
       "id": "loki",
@@ -104,7 +104,7 @@
       "symboles": ["serpent", "feu"],
       "lieu_de_vie": "Jotunheim",
       "categorie": "Ases",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/eODuC6U.png"
     },
     {
       "id": "baldr",
@@ -114,7 +114,7 @@
       "symboles": ["gui", "soleil"],
       "lieu_de_vie": "Asgard",
       "categorie": "Ases",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/1UUTAIX.png"
     },
     {
       "id": "frigg",
@@ -124,7 +124,7 @@
       "symboles": ["fuseau", "clef"],
       "lieu_de_vie": "Asgard",
       "categorie": "Ases",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/Sun2CwI.png"
     },
     {
       "id": "bragi",
@@ -134,7 +134,7 @@
       "symboles": ["harpe", "runes"],
       "lieu_de_vie": "Asgard",
       "categorie": "Ases",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/aTK1bM9.png"
     },
     {
       "id": "idunn",
@@ -144,7 +144,7 @@
       "symboles": ["pommes d'or"],
       "lieu_de_vie": "Asgard",
       "categorie": "Ases",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/G2gS6Sh.png"
     },
     {
       "id": "tyr",
@@ -154,7 +154,7 @@
       "symboles": ["épée", "balance"],
       "lieu_de_vie": "Asgard",
       "categorie": "Ases",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/MGjYmEM.png"
     },
     {
       "id": "fenrir",
@@ -164,7 +164,7 @@
       "symboles": ["chaînes Gleipnir"],
       "lieu_de_vie": "Helheim",
       "categorie": "Monstre",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/tyOKhJ3.png"
     },
     {
       "id": "kvasir",
@@ -174,7 +174,7 @@
       "symboles": ["miellat", "livre"],
       "lieu_de_vie": "Midgard",
       "categorie": "Ases",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/5IKzZsp.png"
     },
     {
       "id": "njord",
@@ -184,7 +184,7 @@
       "symboles": ["navire", "poissons"],
       "lieu_de_vie": "Vanaheim",
       "categorie": "Vanes",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/mWQD9lw.png"
     },
     {
       "id": "freyr",
@@ -194,7 +194,7 @@
       "symboles": ["sanglier Gullinbursti", "navire Skidbladnir"],
       "lieu_de_vie": "Vanaheim",
       "categorie": "Vanes",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/j2Nq0hX.png"
     },
     {
       "id": "freyja",
@@ -204,7 +204,7 @@
       "symboles": ["collier Brísingamen", "chat", "char tiré par des chats"],
       "lieu_de_vie": "Vanaheim",
       "categorie": "Vanes",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/2OiTepb.png"
     },
     {
       "id": "nerthus",
@@ -214,7 +214,7 @@
       "symboles": ["terre", "chariot"],
       "lieu_de_vie": "Vanaheim",
       "categorie": "Vanes",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/Y4KUo6O.png"
     },
     {
       "id": "gullveig",
@@ -224,7 +224,7 @@
       "symboles": ["or", "feu"],
       "lieu_de_vie": "Vanaheim",
       "categorie": "Vanes",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/zfxuQWT.png"
     },
     {
       "id": "ymir",
@@ -254,7 +254,7 @@
       "symboles": ["serpent géant"],
       "lieu_de_vie": "Jotunheim",
       "categorie": "Monstre",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/urciuDo.png"
     },
     {
       "id": "hrymr",
@@ -264,7 +264,7 @@
       "symboles": ["marteau géant"],
       "lieu_de_vie": "Jotunheim",
       "categorie": "Monstre",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/QDZFmJX.png"
     },
     {
       "id": "light_elf_king",
@@ -297,14 +297,14 @@
       "image": "url_de_l_image"
     },
     {
-      "id": "surt",
-      "name": "Surt",
+      "id": "surtr",
+      "name": "Surtr",
       "description": "Géant de feu, gardien de Muspelheim, destiné à détruire le monde par le feu lors du Ragnarök.",
       "traits_particuliers": "Porte une épée enflammée qui brûle tout sur son passage.",
       "symboles": ["épée de feu"],
       "lieu_de_vie": "Muspelheim",
       "categorie": "Monstre",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/vEjYluP.png"
     },
     {
       "id": "nidhogg",
@@ -314,7 +314,7 @@
       "symboles": ["dragon", "racines"],
       "lieu_de_vie": "Niflheim",
       "categorie": "Monstre",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/E4x3BYp.png"
     },
     {
       "id": "hel",
@@ -324,7 +324,7 @@
       "symboles": ["squelette", "cercueil"],
       "lieu_de_vie": "Helheim",
       "categorie": "Vanes",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/TUrgCCQ.png"
     }
   ],
   "categories": {
