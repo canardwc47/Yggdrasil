@@ -330,7 +330,7 @@
   "categories": {
     "Ases": ["odin", "thor", "heimdall", "loki", "baldr", "frigg", "bragi", "idunn", "tyr"],
     "Vanes": ["njord", "freyja", "freyr", "nerthus", "gullveig", "skadi", "hel"],
-    "Monstres": ["fenrir", "ymir", "jormungandr", "surt", "nidhogg", "hrymr"],
+    "Monstres": ["fenrir", "ymir", "jormungandr", "surtr", "nidhogg", "hrymr"],
     "Nain": ["brokkr", "sindri"],
     "Elfes": ["light_elf_king"]
   }
