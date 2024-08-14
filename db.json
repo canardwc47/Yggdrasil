@@ -64,7 +64,28 @@
       "habitants": ["hel", "fenrir"]
     }
   ],
-
+  "categories": {
+    "Ases": {
+      "name": "Ases",
+      "habitants": ["odin", "thor", "heimdall", "loki", "baldr", "frigg", "bragi", "idunn", "tyr"]
+    },
+    "Vanes": {
+      "name": "Vanes",
+      "habitants": ["njord", "freyja", "freyr", "nerthus", "gullveig", "skadi", "hel"]
+    },
+    "Monstres": {
+      "name": "Monstres",
+      "habitants": ["fenrir", "ymir", "jormungandr", "surtr", "nidhogg", "hrymr"]
+    },
+    "Nains": {
+      "name": "Nains",
+      "habitants": ["brokkr", "sindri"]
+    },
+    "Elfes": {
+      "name": "Elfes",
+      "habitants": ["light_elf_king"]
+    }
+  },
   "habitants": [
     {
       "id": "odin",
@@ -163,7 +184,7 @@
       "traits_particuliers": "Une taille gigantesque et une force surhumaine, enchaîné par les dieux par crainte de sa puissance.",
       "symboles": ["chaînes Gleipnir"],
       "lieu_de_vie": "Helheim",
-      "categorie": "Monstre",
+      "categorie": "Monstres",
       "image": "https://i.imgur.com/tyOKhJ3.png"
     },
     {
@@ -233,7 +254,7 @@
       "traits_particuliers": "Créé à partir du feu et de la glace, son corps a été utilisé pour créer le monde.",
       "symboles": ["glace", "feu"],
       "lieu_de_vie": "Jotunheim",
-      "categorie": "Monstre",
+      "categorie": "Monstres",
       "image": "url_de_l_image"
     },
     {
@@ -253,7 +274,7 @@
       "traits_particuliers": "Sa taille est telle qu'il peut encercler le monde et se mordre la queue.",
       "symboles": ["serpent géant"],
       "lieu_de_vie": "Jotunheim",
-      "categorie": "Monstre",
+      "categorie": "Monstres",
       "image": "https://i.imgur.com/urciuDo.png"
     },
     {
@@ -263,7 +284,7 @@
       "traits_particuliers": "Capable de soulever des montagnes et de les jeter sur ses ennemis.",
       "symboles": ["marteau géant"],
       "lieu_de_vie": "Jotunheim",
-      "categorie": "Monstre",
+      "categorie": "Monstres",
       "image": "https://i.imgur.com/QDZFmJX.png"
     },
     {
@@ -283,7 +304,7 @@
       "traits_particuliers": "Connu pour avoir forgé Mjöllnir, le marteau de Thor.",
       "symboles": ["marteau", "enclume"],
       "lieu_de_vie": "Nidavellir",
-      "categorie": "Nain",
+      "categorie": "Nains",
       "image": "url_de_l_image"
     },
     {
@@ -293,7 +314,7 @@
       "traits_particuliers": "Créateur du sanglier Gullinbursti et de l'anneau Draupnir.",
       "symboles": ["sanglier", "anneau"],
       "lieu_de_vie": "Nidavellir",
-      "categorie": "Nain",
+      "categorie": "Nains",
       "image": "url_de_l_image"
     },
     {
@@ -303,7 +324,7 @@
       "traits_particuliers": "Porte une épée enflammée qui brûle tout sur son passage.",
       "symboles": ["épée de feu"],
       "lieu_de_vie": "Muspelheim",
-      "categorie": "Monstre",
+      "categorie": "Monstres",
       "image": "https://i.imgur.com/vEjYluP.png"
     },
     {
@@ -313,7 +334,7 @@
       "traits_particuliers": "Représente la destruction et le chaos, rôdant sous l'arbre du monde.",
       "symboles": ["dragon", "racines"],
       "lieu_de_vie": "Niflheim",
-      "categorie": "Monstre",
+      "categorie": "Monstres",
       "image": "https://i.imgur.com/E4x3BYp.png"
     },
     {
@@ -326,13 +347,7 @@
       "categorie": "Vanes",
       "image": "https://i.imgur.com/TUrgCCQ.png"
     }
-  ],
-  "categories": {
-    "Ases": ["odin", "thor", "heimdall", "loki", "baldr", "frigg", "bragi", "idunn", "tyr"],
-    "Vanes": ["njord", "freyja", "freyr", "nerthus", "gullveig", "skadi", "hel"],
-    "Monstres": ["fenrir", "ymir", "jormungandr", "surtr", "nidhogg", "hrymr"],
-    "Nain": ["brokkr", "sindri"],
-    "Elfes": ["light_elf_king"]
-  }
+  ]
 }
+
 
