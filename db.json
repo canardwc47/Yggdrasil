@@ -64,28 +64,6 @@
       "habitants": ["hel", "fenrir"]
     }
   ],
-  "categories": {
-    "Ases": {
-      "name": "Ases",
-      "habitants": ["odin", "thor", "heimdall", "loki", "baldr", "frigg", "bragi", "idunn", "tyr"]
-    },
-    "Vanes": {
-      "name": "Vanes",
-      "habitants": ["njord", "freyja", "freyr", "nerthus", "gullveig", "skadi", "hel"]
-    },
-    "Monstres": {
-      "name": "Monstres",
-      "habitants": ["fenrir", "ymir", "jormungandr", "surtr", "nidhogg", "hrymr"]
-    },
-    "Nains": {
-      "name": "Nains",
-      "habitants": ["brokkr", "sindri"]
-    },
-    "Elfes": {
-      "name": "Elfes",
-      "habitants": ["light_elf_king"]
-    }
-  },
   "habitants": [
     {
       "id": "odin",
@@ -347,7 +325,212 @@
       "categorie": "Vanes",
       "image": "https://i.imgur.com/TUrgCCQ.png"
     }
+  ],
+  "ases": [
+    {
+      "id": "odin",
+      "name": "Odin",
+      "description": "Roi des dieux Ases, dieu de la sagesse, de la guerre, de la poésie et de la magie.",
+      "traits_particuliers": "Un vieil homme avec un seul œil, ayant sacrifié l’autre pour acquérir la sagesse. Il porte souvent un manteau bleu et un chapeau large.",
+      "symboles": ["corbeaux (Hugin et Muninn)", "loups (Geri et Freki)", "lance Gungnir", "cheval à huit jambes Sleipnir"],
+      "lieu_de_vie": "Asgard",
+      "image": "https://i.imgur.com/XFmV9tK.png"
+    },
+    {
+      "id": "thor",
+      "name": "Thor",
+      "description": "Dieu du tonnerre, protecteur de Midgard, célèbre pour sa force immense.",
+      "traits_particuliers": "Porte un marteau appelé Mjöllnir, capable de provoquer des éclairs.",
+      "symboles": ["marteau Mjöllnir", "chariot tiré par des boucs"],
+      "lieu_de_vie": "Asgard",
+      "image": "https://i.imgur.com/zd8TMMx.png"
+    },
+    {
+      "id": "heimdall",
+      "name": "Heimdall",
+      "description": "Gardien du Bifröst, le pont arc-en-ciel reliant Asgard à Midgard.",
+      "traits_particuliers": "Possède une vision et une ouïe exceptionnelles, lui permettant de surveiller l'approche des ennemis.",
+      "symboles": ["corne Gjallarhorn"],
+      "lieu_de_vie": "Asgard",
+      "image": "https://i.imgur.com/gWthT1A.png"
+    },
+    {
+      "id": "loki",
+      "name": "Loki",
+      "description": "Dieu de la malice et du chaos, souvent à l'origine de problèmes pour les dieux.",
+      "traits_particuliers": "Changeur de forme et maître des illusions.",
+      "symboles": ["serpent", "feu"],
+      "lieu_de_vie": "Jotunheim",
+      "image": "https://i.imgur.com/eODuC6U.png"
+    },
+    {
+      "id": "baldr",
+      "name": "Baldr",
+      "description": "Dieu de la lumière, de la pureté et de la beauté.",
+      "traits_particuliers": "Aimé de tous, il est invulnérable à tout sauf au gui.",
+      "symboles": ["gui", "soleil"],
+      "lieu_de_vie": "Asgard",
+      "image": "https://i.imgur.com/1UUTAIX.png"
+    },
+    {
+      "id": "frigg",
+      "name": "Frigg",
+      "description": "Déesse de l'amour, du mariage et de la maternité, épouse d'Odin.",
+      "traits_particuliers": "Connue pour sa grande sagesse et son pouvoir de prophétie.",
+      "symboles": ["fuseau", "clef"],
+      "lieu_de_vie": "Asgard",
+      "image": "https://i.imgur.com/Sun2CwI.png"
+    },
+    {
+      "id": "bragi",
+      "name": "Bragi",
+      "description": "Dieu de la poésie et de l'éloquence.",
+      "traits_particuliers": "Connu pour sa sagesse et sa capacité à charmer par ses mots.",
+      "symboles": ["harpe", "runes"],
+      "lieu_de_vie": "Asgard",
+      "image": "https://i.imgur.com/aTK1bM9.png"
+    },
+    {
+      "id": "idunn",
+      "name": "Idunn",
+      "description": "Gardienne des pommes d'or qui confèrent l'immortalité aux dieux.",
+      "traits_particuliers": "Jeune et belle déesse, symbole de l'éternelle jeunesse.",
+      "symboles": ["pommes d'or"],
+      "lieu_de_vie": "Asgard",
+      "image": "https://i.imgur.com/G2gS6Sh.png"
+    },
+    {
+      "id": "tyr",
+      "name": "Tyr",
+      "description": "Dieu de la guerre et de la justice.",
+      "traits_particuliers": "A sacrifié sa main droite pour enchaîner Fenrir.",
+      "symboles": ["épée", "balance"],
+      "lieu_de_vie": "Asgard",
+      "image": "https://i.imgur.com/MGjYmEM.png"
+    }
+  ],
+  "vanes": [
+    {
+      "id": "njord",
+      "name": "Njörd",
+      "description": "Dieu Vane des mers, du vent et de la pêche.",
+      "traits_particuliers": "Vénéré pour sa capacité à calmer les tempêtes et à apporter la prospérité.",
+      "symboles": ["navire", "poissons"],
+      "lieu_de_vie": "Vanaheim",
+      "image": "https://i.imgur.com/mWQD9lw.png"
+    },
+    {
+      "id": "freyr",
+      "name": "Freyr",
+      "description": "Dieu Vane de la fertilité, de la paix et de la prospérité.",
+      "traits_particuliers": "Porte une épée magique et voyage sur un sanglier nommé Gullinbursti.",
+      "symboles": ["sanglier Gullinbursti", "navire Skidbladnir"],
+      "lieu_de_vie": "Vanaheim",
+      "image": "https://i.imgur.com/j2Nq0hX.png"
+    },
+    {
+      "id": "freyja",
+      "name": "Freyja",
+      "description": "Déesse Vane de l'amour, de la beauté et de la fertilité.",
+      "traits_particuliers": "Associée à la magie et à la prophétie, elle est aussi une guerrière redoutable.",
+      "symboles": ["collier Brísingamen", "chat", "char tiré par des chats"],
+      "lieu_de_vie": "Vanaheim",
+      "image": "https://i.imgur.com/2OiTepb.png"
+    },
+    {
+      "id": "nerthus",
+      "name": "Nerthus",
+      "description": "Déesse de la fertilité et de la terre, honorée par les Vanes.",
+      "traits_particuliers": "Représente la terre nourricière, apportant prospérité et paix.",
+      "symboles": ["terre", "chariot"],
+      "lieu_de_vie": "Vanaheim",
+      "image": "https://i.imgur.com/Y4KUo6O.png"
+    },
+    {
+      "id": "gullveig",
+      "name": "Gullveig",
+      "description": "Une sorcière Vane associée à l'or et à la magie, elle a été brûlée trois fois par les Ases.",
+      "traits_particuliers": "Capable de renaître de ses cendres, elle est un symbole de la résilience.",
+      "symboles": ["or", "feu"],
+      "lieu_de_vie": "Vanaheim",
+      "image": "https://i.imgur.com/zfxuQWT.png"
+    },
+    {
+      "id": "skadi",
+      "name": "Skadi",
+      "description": "Déesse géante de la chasse et de l'hiver.",
+      "traits_particuliers": "Connue pour son arc puissant et sa capacité à survivre dans les conditions les plus rudes.",
+      "symboles": ["arc", "chaussures de neige"],
+      "lieu_de_vie": "Jotunheim",
+      "image": "url_de_l_image"
+    },
+    {
+      "id": "hel",
+      "name": "Hel",
+      "description": "Déesse des morts, règne sur Helheim, où résident ceux qui sont morts de vieillesse ou de maladie.",
+      "traits_particuliers": "Son corps est à moitié vivant et à moitié mort.",
+      "symboles": ["squelette", "cercueil"],
+      "lieu_de_vie": "Helheim",
+      "image": "https://i.imgur.com/TUrgCCQ.png"
+    }
+  ],
+  "monstres": [
+    {
+      "id": "fenrir",
+      "name": "Fenrir",
+      "description": "Loup géant, fils de Loki, destiné à jouer un rôle clé lors du Ragnarök.",
+      "traits_particuliers": "Une taille gigantesque et une force surhumaine, enchaîné par les dieux par crainte de sa puissance.",
+      "symboles": ["chaînes Gleipnir"],
+      "lieu_de_vie": "Helheim",
+      "image": "https://i.imgur.com/tyOKhJ3.png"
+    },
+    {
+      "id": "ymir",
+      "name": "Ymir",
+      "description": "Le premier géant, ancêtre de tous les géants.",
+      "traits_particuliers": "Créé à partir du feu et de la glace, son corps a été utilisé pour créer le monde.",
+      "symboles": ["glace", "feu"],
+      "lieu_de_vie": "Jotunheim",
+      "image": "url_de_l_image"
+    },
+    {
+      "id": "jormungandr",
+      "name": "Jörmungandr",
+      "description": "Le serpent de Midgard, fils de Loki, il entoure le monde et est destiné à affronter Thor lors du Ragnarök.",
+      "traits_particuliers": "Sa taille est telle qu'il peut encercler le monde et se mordre la queue.",
+      "symboles": ["serpent géant"],
+      "lieu_de_vie": "Jotunheim",
+      "image": "https://i.imgur.com/urciuDo.png"
+    },
+    {
+      "id": "hrymr",
+      "name": "Hrymr",
+      "description": "Chef des géants lors du Ragnarök, connu pour sa force brutale.",
+      "traits_particuliers": "Capable de soulever des montagnes et de les jeter sur ses ennemis.",
+      "symboles": ["marteau géant"],
+      "lieu_de_vie": "Jotunheim",
+      "image": "https://i.imgur.com/QDZFmJX.png"
+    },
+    {
+      "id": "surtr",
+      "name": "Surtr",
+      "description": "Géant de feu, gardien de Muspelheim, destiné à détruire le monde par le feu lors du Ragnarök.",
+      "traits_particuliers": "Porte une épée enflammée qui brûle tout sur son passage.",
+      "symboles": ["épée de feu"],
+      "lieu_de_vie": "Muspelheim",
+      "image": "https://i.imgur.com/vEjYluP.png"
+    },
+    {
+      "id": "nidhogg",
+      "name": "Níðhöggr",
+      "description": "Dragon qui ronge les racines d'Yggdrasil dans Niflheim.",
+      "traits_particuliers": "Représente la destruction et le chaos, rôdant sous l'arbre du monde.",
+      "symboles": ["dragon", "racines"],
+      "lieu_de_vie": "Niflheim",
+      "image": "https://i.imgur.com/E4x3BYp.png"
+    }
   ]
 }
+
 
 
