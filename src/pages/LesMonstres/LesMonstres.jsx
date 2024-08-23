@@ -1,42 +1,52 @@
-// src/pages/LesMonstres/LesMonstres.jsx
-import React, { useEffect, useState } from 'react';
-import styles from './style.module.css';
-import BackgroundPage from '../../components/Background-Page/Background-Page';
-import ListPerso from '../../components/ListPerso/ListPerso';
+// LesMonstres.jsx
+import React, { useState, useEffect } from 'react';
 import { WorldAPI } from '../../api/world-API';
+import ListPerso from '../../components/ListPerso/ListPerso';
+import DescriptifMonstres from '../../components/DescriptifMonstres/DescriptifMonstres'; // Le composant pour le descriptif
 
 const LesMonstres = () => {
-  const [habitants, setHabitants] = useState([]);
+  const [monstres, setMonstres] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
+      setLoading(true);
+      setError(null);
       try {
-        const data = await WorldAPI.fetchAllWorld();
-        const monsters = data.habitants.filter(habitant => habitant.categorie === 'Monstre');
-        setHabitants(monsters.map(habitant => habitant.id)); // Assurez-vous de passer les IDs
+        const monstresData = await WorldAPI.fetchMonstres(); // Appel à l'API pour récupérer les monstres
+        setMonstres(monstresData);
       } catch (error) {
-        console.error("Erreur lors de la récupération des monstres :", error);
+        setError(error.message);
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchData();
   }, []);
 
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
   return (
-    <BackgroundPage>
-      <div className={styles.container}>
-        <h1 className={styles.title}>Les Monstres</h1>
-        {habitants.length > 0 ? (
-          <ListPerso habitants={habitants} categorie={['Monstre']} />
-        ) : (
-          <p>Aucun monstre trouvé.</p>
-        )}
-      </div>
-    </BackgroundPage>
+    <div className="page-background"> {/* Assurez-vous d'avoir le même style que LesMondes.jsx */}
+      
+      <DescriptifMonstres /> {/* Le descriptif des monstres */}
+      
+      <ListPerso habitants={monstres.map(h => h.id)} categorie={['Monstres']} /> {/* Affichage des monstres */}
+      
+    </div>
   );
 };
 
 export default LesMonstres;
+
 
 
 

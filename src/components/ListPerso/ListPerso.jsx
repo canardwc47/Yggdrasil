@@ -58,7 +58,7 @@ const ListPerso = ({ habitants, categorie }) => {
     if (categorie.includes('Ases') && categorie.includes('Vanes')) return "Les Dieux";
     if (categorie.includes('Ases')) return "Les Ases";
     if (categorie.includes('Vanes')) return "Les Vanes";
-    if (categorie.includes('Monstres')) return "Les Monstres";
+    if (categorie.includes('Monstres')) return null;
     return "Les Habitants";
   };
 
@@ -89,6 +89,7 @@ const ListPerso = ({ habitants, categorie }) => {
 };
 
 export default ListPerso;
+
 
 
 

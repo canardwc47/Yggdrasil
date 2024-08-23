@@ -1,0 +1,9 @@
+/* style.module.css */
+.descriptifContainer {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 1.6;
+    color: white; /* Assurez-vous que cette couleur contraste bien avec le fond */
+  }
+  

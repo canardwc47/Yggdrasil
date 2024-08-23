@@ -55,8 +55,52 @@ export const WorldAPI = {
       console.error(`Error fetching habitant with id ${id}:`, error);
       return null;
     }
+  },
+
+  async fetchAses() {
+    try {
+      const response = await fetch(BASE_URL);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json();
+      return data.ases || [];
+    } catch (error) {
+      console.error("Error fetching Ases:", error);
+      return [];
+    }
+  },
+
+  async fetchVanes() {
+    try {
+      const response = await fetch(BASE_URL);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json();
+      return data.vanes || [];
+    } catch (error) {
+      console.error("Error fetching Vanes:", error);
+      return [];
+    }
+  },
+
+  async fetchMonstres() { // Nouvelle fonction pour récupérer les monstres
+    try {
+      const response = await fetch(BASE_URL);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json();
+      return data.monstres || []; // Suppose que les monstres sont stockés sous une clé "monstres"
+    } catch (error) {
+      console.error("Error fetching Monstres:", error);
+      return [];
+    }
   }
 };
+
+
 
 
 

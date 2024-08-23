@@ -1,28 +1,29 @@
-// src/pages/LesDieux/LesDieux.jsx
-import React, { useEffect, useState } from 'react';
-import styles from './style.module.css';
-import BackgroundPage from '../../components/Background-Page/Background-Page';
-import ListPerso from '../../components/ListPerso/ListPerso';
+// LesDieux.jsx
+import React, { useState, useEffect } from 'react';
 import { WorldAPI } from '../../api/world-API';
+import ListPerso from '../../components/ListPerso/ListPerso';
+import DescriptifDieux from '../../components/DescriptifDieux/DescriptifDieux'; // Le nouveau composant pour le descriptif
 
 const LesDieux = () => {
-  const [habitants, setHabitants] = useState([]);
+  const [ases, setAses] = useState([]);
+  const [vanes, setVanes] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
+      setLoading(true);
+      setError(null);
       try {
-        const data = await WorldAPI.fetchAllWorld();
-
-        // Filtrage des habitants par catégorie (Ases et Vanes)
-        const gods = data.habitants.filter(
-          habitant => habitant.categorie === 'Ases' || habitant.categorie === 'Vanes'
-        );
-
-        setHabitants(gods);
-        setLoading(false);
+        const [asesData, vanesData] = await Promise.all([
+          WorldAPI.fetchAses(),
+          WorldAPI.fetchVanes()
+        ]);
+        setAses(asesData);
+        setVanes(vanesData);
       } catch (error) {
-        console.error("Erreur lors de la récupération des dieux:", error);
+        setError(error.message);
+      } finally {
         setLoading(false);
       }
     };
@@ -30,23 +31,29 @@ const LesDieux = () => {
     fetchData();
   }, []);
 
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
   return (
-    <BackgroundPage>
-      <div className={styles.container}>
-        <h1 className={styles.title}>Les Dieux</h1>
-        {loading ? (
-          <p>Loading...</p>
-        ) : habitants.length > 0 ? (
-          <ListPerso habitants={habitants} />
-        ) : (
-          <p>Aucun dieu trouvé.</p>
-        )}
-      </div>
-    </BackgroundPage>
+    <div className="page-background"> {/* Assurez-vous d'avoir le même style que LesMondes.jsx */}
+      
+      <DescriptifDieux /> {/* Le descriptif des dieux */}
+      
+      <ListPerso habitants={ases.map(h => h.id)} categorie={['Ases']} />
+      
+      <ListPerso habitants={vanes.map(h => h.id)} categorie={['Vanes']} />
+    </div>
   );
 };
 
 export default LesDieux;
+
+
 
 
 
