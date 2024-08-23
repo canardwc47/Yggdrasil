@@ -1,4 +1,4 @@
-// src/components/Header.jsx
+// src/components/Header/Header.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../Header/style.module.css';
@@ -25,5 +25,6 @@ const Header = ({ position }) => {
 };
 
 export default Header;
+
 
 

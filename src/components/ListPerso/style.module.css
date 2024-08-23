@@ -1,0 +1,22 @@
+/* style.module.css */
+.habitantsContainer {
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .habitantsTitle {
+    text-align: center;
+    font-family: 'LBA', sans-serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .habitantsGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colonnes de taille égale */
+    gap: 20px; /* Espace entre les cartes */
+    justify-content: center;
+  }
+  
+  
+  

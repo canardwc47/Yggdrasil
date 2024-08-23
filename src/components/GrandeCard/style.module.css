@@ -1,0 +1,114 @@
+/* style.module.css */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .grandeCard {
+    background: linear-gradient(to bottom, #7f5a91, #171745); /* Gradient violet */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: #ADE8F4 (94, 183, 225, 0.2);
+    width: 400px; /* Largeur de la carte */
+    height: 450px; /* Hauteur de la carte */
+    position: relative;
+    color: #fff;
+    margin-top: 50px; /* Ajoute de l'espace en haut pour descendre la carte */
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .grandeCardContent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .imageContainer {
+    position: absolute;
+    top: -130px; /* Le personnage reste à sa position actuelle */
+    right: 20px; /* Positionne l'image à droite */
+    z-index: 1001; /* S'assure que l'image est au-dessus de tout le reste */
+  }
+  
+  .grandeCardImage {
+    width: 180px; /* Taille de l'image du personnage */
+    height: auto;
+  }
+  
+  .textContent {
+    font-family: 'Lacquer';
+    margin-top: 100px; /* Ajuste pour laisser de la place à l'image du personnage */
+    padding-right: 10px; /* Ajoute un peu de padding à droite pour le défilement */
+    overflow-y: auto; /* Permet de défiler si le contenu dépasse */
+  }
+  
+  .habitantName {
+    font-weight: normal;
+    text-decoration: none;
+    font-family: 'LBA', sans-serif;
+    font-size: 48px;
+    text-align: left;
+    margin-bottom: 30px;
+    margin-top: 60px;
+    position: absolute;
+    top: -50px; /* Positionne le nom du personnage à côté de l'image */
+    left: 0px;
+    width: calc(100% - 200px); /* Prend en compte la largeur de l'image agrandie */
+    text-align: left;
+    display: flex;
+    align-items: center; /* Centre le nom verticalement */
+  }
+  
+  /* Style des titres (Description, Symboles, Lieu de Vie, etc.) */
+  .textContent h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Style du texte des descriptions, symboles, etc. */
+  .textContent p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .prevButton, .nextButton {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 48px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+  }
+  
+  .prevButton {
+    left: 10px;
+  }
+  
+  .nextButton {
+    right: 10px;
+  }
+  
+  

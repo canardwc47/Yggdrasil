@@ -11,6 +11,7 @@ const Footer = ({ position }) => {
       <div className={S.left}>
         <ul className={S.ul}>
           <li className={S.li}><a href="/">Yggdrasil</a></li>
+          <li className={S.li}><a href="/les-mondes">Les Mondes</a></li>
           <li className={S.li}><a href="/les-dieux">Les Dieux</a></li>
           <li className={S.li}><a href="/les-monstres">Les Monstres</a></li>
         </ul>

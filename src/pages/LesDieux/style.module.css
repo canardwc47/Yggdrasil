@@ -1,0 +1,12 @@
+/* src/pages/LesDieux/style.module.css */
+.container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .title {
+    font-family: 'LBA', sans-serif;
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
