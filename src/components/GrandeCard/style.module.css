@@ -16,12 +16,24 @@
     background: linear-gradient(to bottom, #7f5a91, #171745); /* Gradient violet */
     padding: 20px;
     border-radius: 20px;
-    box-shadow: #ADE8F4 (94, 183, 225, 0.2);
     width: 400px; /* Largeur de la carte */
     height: 450px; /* Hauteur de la carte */
     position: relative;
     color: #fff;
     margin-top: 50px; /* Ajoute de l'espace en haut pour descendre la carte */
+  }
+
+  .grandeCard::after {
+    content: '';
+    position: absolute;
+    top: 10px; /* Décalage vers le bas */
+    left: 10px; /* Décalage vers la droite */
+    width: 100%;
+    height: 100%;
+    background: #ADE8F4; /* Couleur plus claire pour l'effet de décalage */
+    border-radius: 20px;
+    z-index: -1; /* Assurez-vous que cette carte est derrière la carte principale */
+    box-shadow: none; /* Supprimez l'ombre pour un effet propre */
   }
   
   .closeButton {
@@ -95,7 +107,7 @@
     background: none;
     border: none;
     color: white;
-    font-size: 48px;
+    font-size: 35px;
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -104,11 +116,11 @@
   }
   
   .prevButton {
-    left: 10px;
+    left: 450px;
   }
   
   .nextButton {
-    right: 10px;
+    right: 450px;
   }
   
   

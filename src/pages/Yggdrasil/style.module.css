@@ -57,14 +57,65 @@
   transform: translateX(-50%);
   width: 100%;
   height: auto;
-  margin-top: 100px;
+  margin-top: 200px;
+}
+.titleContainer {
+  position: absolute;
+  top: 30px;
+  left: 30%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  z-index: 10; /* Pour s'assurer que le texte est au-dessus de l'arbre */
 }
 
-/* Positionnement des cercles */
+.title {
+  font-family: 'LBA', sans-serif; /* Remplacez 'YourFont' par la police de votre choix */
+  font-weight: normal;
+  font-size: 128px;
+  margin-left: 0;
+}
+
+.descriptionContainer {
+  position: absolute;
+  margin-top: 250px;
+  top: 100px; /* Ajustez cette valeur pour positionner verticalement le descriptif */
+  right: 150px; /* Aligne le conteneur à droite */
+  width: 30%; /* Définit la largeur du conteneur pour permettre un bon alignement du texte */
+  text-align: center; /* Centre le texte à l'intérieur du conteneur */
+  color: white;
+  z-index: 10; /* Assurez-vous que le texte est au-dessus de l'arbre */
+}
+
+.description {
+  font-family: 'Lacquer', sans-serif; /* Remplacez 'YourFont' par la police de votre choix */
+  font-weight: normal;
+  font-size: 20px;
+  margin: 0; /* Retirez les marges pour un meilleur contrôle du placement */
+}
+
+
+/* Animation pour le mouvement circulaire */
+@keyframes floatCircle {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, -10px);
+  }
+  50% {
+    transform: translate(20px, 0);
+  }
+  75% {
+    transform: translate(10px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
 .worldCircle {
   position: absolute;
-  width: 100px;
-  height: 100px;
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
@@ -73,7 +124,63 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: floatCircle 5s infinite ease-in-out; /* Appliquez l'animation */
 }
+
+.circle1 {
+  animation-delay: 0s;
+  width: 180px;
+  height: 180px;
+}
+
+.circle2 {
+  animation-delay: 0.5s;
+  width: 180px;
+  height: 180px;
+}
+
+.circle3 {
+  animation-delay: 1s;
+  width: 180px;
+  height: 180px;
+}
+
+.circle4 {
+  animation-delay: 1.5s;
+  width: 180px;
+  height: 180px;
+}
+
+.circle5 {
+  animation-delay: 2s;
+  width: 220px;
+  height: 220px;
+}
+
+.circle6 {
+  animation-delay: 2.5s;
+  width: 150px;
+  height: 150px;
+}
+
+.circle7 {
+  animation-delay: 3s;
+  width: 180px;
+  height: 180px;
+}
+
+.circle8 {
+  animation-delay: 3.5s;
+  width: 190px;
+  height: 190px;
+}
+
+.circle9 {
+  animation-delay: 4s;
+  width: 200px;
+  height: 200px;
+}
+
 
 /* Texte du monde */
 .worldCircle p {
@@ -85,7 +192,7 @@
   padding: 0;
   color: white;
   text-align: center;
-  font-size: 14px;
+  font-size: 24px;
   font-weight: bold;
   opacity: 0; /* Caché par défaut */
   transition: opacity 0.3s ease;
@@ -98,20 +205,14 @@
 
 /* Zoom lisse au survol */
 .worldCircle img {
-  width: 150%;
-  height: 150%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 50%;
-  transition: transform 0.3s ease;
+  transition: transform 0.7s ease;
 }
 
 .worldCircle:hover img {
-  transform: scale(1.5);
+  transform: scale(2.5);
 }
-
-
-
-
-
 
 

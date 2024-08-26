@@ -1,7 +1,7 @@
 /* style.module.css */
 .navContainer {
   background-color: transparent;
-  padding: 100px; /* Suppression du padding pour un gap de 0 avec le header */
+  padding: 40px; /* Suppression du padding pour un gap de 0 avec le header */
   display: flex;
   justify-content: center;
   align-items: center;

@@ -2,8 +2,21 @@
 .descriptifContainer {
     text-align: center;
     margin: 20px 0;
-    font-size: 18px;
     line-height: 1.6;
     color: white; /* Assurez-vous que cette couleur contraste bien avec le fond */
+  }
+
+  .title {
+    font-family: 'LBA';
+    font-weight: normal;
+    font-size: 64px;
+
+  }
+
+  .p {
+    font-family: 'Lacquer';
+    font-size: 20px;
+    margin-left: 350px;
+    margin-right: 350px;
   }
   

@@ -1,7 +1,6 @@
 /* TextMonde.css */
 .MondeContainer {
   text-align: center;
-  padding: 20px;
   color: #fff;
   max-width: 800px;
   margin: 20px auto;
@@ -31,6 +30,7 @@
   font-family: 'Lacquer' !important;
   font-size: 20px;
   line-height: 1.6;
+  padding: 40px;
 }
 
   

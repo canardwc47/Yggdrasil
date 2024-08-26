@@ -6,7 +6,7 @@ const DescriptifDieux = () => {
   return (
     <div className={S.descriptifContainer}>
         <h1 className={S.title}>Les Dieux</h1>
-      <p>
+      <p className={S.p}>
         Les dieux nordiques se divisent en deux grandes familles : les Ases et les Vanes.
         Les Ases, régnant principalement à Asgard, sont associés à la guerre, au pouvoir, et à l'ordre cosmique. Les Vanes, quant à eux,
         sont liés à la fertilité, la nature, et la magie. Bien que les deux familles aient leurs différences, elles ont su former des alliances 
