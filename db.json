@@ -267,13 +267,13 @@
     },
     {
       "id": "light_elf_king",
-      "name": "Roi des Elfes de Lumière",
+      "name": "Roi des Elfes",
       "description": "Souverain des elfes de lumière, il veille sur la beauté et la magie de son royaume.",
       "traits_particuliers": "Connu pour sa grande sagesse et son éclat surnaturel.",
       "symboles": ["lumière", "fée"],
       "lieu_de_vie": "Alfheim",
       "categorie": "Elfes",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/LZf5xKQ.png"
     },
     {
       "id": "brokkr",
@@ -283,7 +283,7 @@
       "symboles": ["marteau", "enclume"],
       "lieu_de_vie": "Nidavellir",
       "categorie": "Nains",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/kUg3nTd.png"
     },
     {
       "id": "sindri",
@@ -293,7 +293,7 @@
       "symboles": ["sanglier", "anneau"],
       "lieu_de_vie": "Nidavellir",
       "categorie": "Nains",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/lCnQnrh.png"
     },
     {
       "id": "surtr",
@@ -462,7 +462,7 @@
       "traits_particuliers": "Connue pour son arc puissant et sa capacité à survivre dans les conditions les plus rudes.",
       "symboles": ["arc", "chaussures de neige"],
       "lieu_de_vie": "Jotunheim",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/8ZTXJS7.png"
     },
     {
       "id": "hel",
@@ -491,7 +491,7 @@
       "traits_particuliers": "Créé à partir du feu et de la glace, son corps a été utilisé pour créer le monde.",
       "symboles": ["glace", "feu"],
       "lieu_de_vie": "Jotunheim",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/cv6PmVI.png"
     },
     {
       "id": "jormungandr",
