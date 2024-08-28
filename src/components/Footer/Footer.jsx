@@ -22,7 +22,6 @@ const Footer = ({ position }) => {
       <div className={S.right}>
         <ul className={S.ul}>
           <li className={S.li}><a href="/mentions-legales">Mentions légales</a></li>
-          <li className={S.li}><a href="/cgv">CGV</a></li>
           <li className={S.li}><a href="mailto:yggdrasil@gmail.com">yggdrasil@gmail.com</a></li>
         </ul>
       </div>

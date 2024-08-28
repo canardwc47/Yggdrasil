@@ -51,7 +51,7 @@ a {
 .center img {
   height: 100px; /* Taille par défaut de l'image du logo */
   margin: 0; /* Supprime la marge autour de l'image du logo */
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7)); /* Ajoute une ombre blanche */
+  filter: drop-shadow(0.8px 0.8px 2.5px #ADE8F4); /* Ombre vers le bas et la droite avec la couleur #ADE8F4 */
 }
 
 .left, .right {

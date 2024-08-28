@@ -8,6 +8,7 @@ import Yggdrasil from './pages/Yggdrasil/Yggdrasil';
 import LesMondes from './pages/LesMondes/LesMondes';
 import LesDieux from './pages/LesDieux/LesDieux';
 import LesMonstres from './pages/LesMonstres/LesMonstres';
+import MentionsLegales from './pages/MentionsLegales/MentionsLegales';  // Importez le composant MentionsLegales
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Background from './components/Background-Page/Background-Page';
@@ -43,6 +44,7 @@ const Root = () => (
         <Route path="/les-mondes/:id" element={<App component={<LesMondes />} headerPosition="relative" footerPosition="relative" />} />
         <Route path="/les-dieux" element={<App component={<LesDieux />} headerPosition="relative" footerPosition="relative" />} />
         <Route path="/les-monstres" element={<App component={<LesMonstres />} headerPosition="relative" footerPosition="relative" />} />
+        <Route path="/mentions-legales" element={<App component={<MentionsLegales />} headerPosition="relative" footerPosition="relative" />} /> {/* Nouvelle route pour les mentions légales */}
       </Routes>
     </div>
   </Router>
@@ -56,6 +58,7 @@ root.render(
     <Root />
   </React.StrictMode>
 );
+
 
 
 
