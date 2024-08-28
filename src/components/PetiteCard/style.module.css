@@ -29,11 +29,11 @@
 }
 
 .card:hover .cardImage {
-  transform: scale(1.8); /* Zoomer l'image à 120% lors du survol */
+  transform: scale(1.8); /* Zoomer l'image à 180% lors du survol */
 }
 
 .card:hover {
-  box-shadow: 0 15px 60px #ADE8F4, 0 4px 20px rgba(0, 0, 0, 0.3); /* Ajout d'un effet de lumière à l'ombre lors du survol */
+  box-shadow: 0 15px 60px #580242, 0 4px 20px rgba(0, 0, 0, 0.3); /* Ajout d'un effet de lumière à l'ombre lors du survol */
 }
 
 .cardName {

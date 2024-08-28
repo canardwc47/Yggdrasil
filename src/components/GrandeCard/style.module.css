@@ -1,126 +1,133 @@
 /* style.module.css */
 .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
-  .grandeCard {
-    background: linear-gradient(to bottom, #7f5a91, #171745); /* Gradient violet */
-    padding: 20px;
-    border-radius: 20px;
-    width: 400px; /* Largeur de la carte */
-    height: 450px; /* Hauteur de la carte */
-    position: relative;
-    color: #fff;
-    margin-top: 50px; /* Ajoute de l'espace en haut pour descendre la carte */
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
 
-  .grandeCard::after {
-    content: '';
-    position: absolute;
-    top: 10px; /* Décalage vers le bas */
-    left: 10px; /* Décalage vers la droite */
-    width: 100%;
-    height: 100%;
-    background: #ADE8F4; /* Couleur plus claire pour l'effet de décalage */
-    border-radius: 20px;
-    z-index: -1; /* Assurez-vous que cette carte est derrière la carte principale */
-    box-shadow: none; /* Supprimez l'ombre pour un effet propre */
-  }
-  
-  .closeButton {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
-  .grandeCardContent {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  
-  .imageContainer {
-    position: absolute;
-    top: -130px; /* Le personnage reste à sa position actuelle */
-    right: 20px; /* Positionne l'image à droite */
-    z-index: 1001; /* S'assure que l'image est au-dessus de tout le reste */
-  }
-  
-  .grandeCardImage {
-    width: 180px; /* Taille de l'image du personnage */
-    height: auto;
-  }
-  
-  .textContent {
-    font-family: 'Lacquer';
-    margin-top: 100px; /* Ajuste pour laisser de la place à l'image du personnage */
-    padding-right: 10px; /* Ajoute un peu de padding à droite pour le défilement */
-    overflow-y: auto; /* Permet de défiler si le contenu dépasse */
-  }
-  
-  .habitantName {
-    font-weight: normal;
-    text-decoration: none;
-    font-family: 'LBA', sans-serif;
-    font-size: 48px;
-    text-align: left;
-    margin-bottom: 30px;
-    margin-top: 60px;
-    position: absolute;
-    top: -50px; /* Positionne le nom du personnage à côté de l'image */
-    left: 0px;
-    width: calc(100% - 200px); /* Prend en compte la largeur de l'image agrandie */
-    text-align: left;
-    display: flex;
-    align-items: center; /* Centre le nom verticalement */
-  }
-  
-  /* Style des titres (Description, Symboles, Lieu de Vie, etc.) */
-  .textContent h3 {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  /* Style du texte des descriptions, symboles, etc. */
-  .textContent p {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-  
-  .prevButton, .nextButton {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 35px;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1001;
-  }
-  
-  .prevButton {
-    left: 450px;
-  }
-  
-  .nextButton {
-    right: 450px;
-  }
+.grandeCard {
+  background: linear-gradient(to bottom, #7f5a91, #171745); /* Gradient violet */
+  padding: 20px;
+  border-radius: 20px;
+  width: 400px; /* Largeur de la carte */
+  height: 450px; /* Hauteur de la carte */
+  position: relative;
+  color: #fff;
+  margin-top: 50px; /* Ajoute de l'espace en haut pour descendre la carte */
+}
+
+.grandeCard::after {
+  content: '';
+  position: absolute;
+  top: 10px; /* Décalage vers le bas */
+  left: 10px; /* Décalage vers la droite */
+  width: 100%;
+  height: 100%;
+  background: #ADE8F4; /* Couleur plus claire pour l'effet de décalage */
+  border-radius: 20px;
+  z-index: -1; /* Assurez-vous que cette carte est derrière la carte principale */
+  box-shadow: none; /* Supprimez l'ombre pour un effet propre */
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.grandeCardContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.imageContainer {
+  position: absolute;
+  top: -130px; /* Le personnage reste à sa position actuelle */
+  right: 20px; /* Positionne l'image à droite */
+  z-index: 1001; /* S'assure que l'image est au-dessus de tout le reste */
+  transition: transform 0.3s ease-in-out; /* Ajoute une transition pour l'effet de zoom */
+}
+
+.grandeCardImage {
+  width: 180px; /* Taille de l'image du personnage */
+  height: auto;
+  transition: transform 0.3s ease-in-out; /* Ajoute une transition pour l'effet de zoom */
+}
+
+.imageContainer:hover .grandeCardImage {
+  transform: scale(1.2); /* Agrandir l'image de 10% lors du survol */
+}
+
+.textContent {
+  font-family: 'Lacquer';
+  margin-top: 100px; /* Ajuste pour laisser de la place à l'image du personnage */
+  padding-right: 10px; /* Ajoute un peu de padding à droite pour le défilement */
+  overflow-y: auto; /* Permet de défiler si le contenu dépasse */
+}
+
+.habitantName {
+  font-weight: normal;
+  text-decoration: none;
+  font-family: 'LBA', sans-serif;
+  font-size: 48px;
+  text-align: left;
+  margin-bottom: 30px;
+  margin-top: 60px;
+  position: absolute;
+  top: -50px; /* Positionne le nom du personnage à côté de l'image */
+  left: 0px;
+  width: calc(100% - 200px); /* Prend en compte la largeur de l'image agrandie */
+  text-align: left;
+  display: flex;
+  align-items: center; /* Centre le nom verticalement */
+}
+
+/* Style des titres (Description, Symboles, Lieu de Vie, etc.) */
+.textContent h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style du texte des descriptions, symboles, etc. */
+.textContent p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.prevButton, .nextButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1001;
+}
+
+.prevButton {
+  left: 450px;
+}
+
+.nextButton {
+  right: 450px;
+}
+
   
   
