@@ -1,36 +1,57 @@
-/* style.module.css */
 .cardContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrer le texte en dessous de l'image */
-  }
-  
-  .card {
-    background-color: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Pour s'assurer que l'image reste contenue */
-  }
-  
-  .cardImage {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* L'image est contenue à l'intérieur de la carte sans être coupée */
-    border-radius: 5px;
-  }
-  
-  .cardName {
-    font-family: 'Lacquer', sans-serif;
-    font-size: 18px;
-    color: #fff;
-    margin-top: 10px; /* Espacement au-dessus du nom */
-    text-align: center; /* Centrer le texte */
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible; /* Permet à l'image de dépasser les limites de la carte */
+  position: relative; /* Nécessaire pour que l'image soit bien positionnée */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Ajout de la transition pour l'effet de lumière */
+  cursor: pointer; /* Ajout du curseur de type pointer */
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out; /* Transition pour l'effet de zoom */
+  z-index: 1; /* Assure que l'image reste au-dessus des autres éléments */
+}
+
+.card:hover .cardImage {
+  transform: scale(1.8); /* Zoomer l'image à 120% lors du survol */
+}
+
+.card:hover {
+  box-shadow: 0 15px 60px #ADE8F4, 0 4px 20px rgba(0, 0, 0, 0.3); /* Ajout d'un effet de lumière à l'ombre lors du survol */
+}
+
+.cardName {
+  font-family: 'Lacquer', sans-serif;
+  font-size: 18px;
+  color: #fff;
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
   
   
   

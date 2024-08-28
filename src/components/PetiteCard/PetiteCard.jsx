@@ -1,4 +1,3 @@
-// PetiteCard.jsx
 import React from 'react';
 import S from './style.module.css';
 
@@ -8,12 +7,14 @@ const PetiteCard = ({ image, name }) => {
       <div className={S.card}>
         <img src={image} alt={name} className={S.cardImage} />
       </div>
-      <p className={S.cardName}>{name}</p> {/* Nom en dehors de la carte */}
+      <p className={S.cardName}>{name}</p>
     </div>
   );
 };
 
 export default PetiteCard;
+
+
 
 
 
