@@ -233,7 +233,7 @@
       "symboles": ["glace", "feu"],
       "lieu_de_vie": "Jotunheim",
       "categorie": "Monstres",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/cv6PmVI.png"
     },
     {
       "id": "skadi",
@@ -243,7 +243,7 @@
       "symboles": ["arc", "chaussures de neige"],
       "lieu_de_vie": "Jotunheim",
       "categorie": "Vanes",
-      "image": "url_de_l_image"
+      "image": "https://i.imgur.com/8ZTXJS7.png"
     },
     {
       "id": "jormungandr",
