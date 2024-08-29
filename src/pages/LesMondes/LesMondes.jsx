@@ -1,16 +1,16 @@
-// LesMondes.jsx
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import TextMonde from '../../components/TextMonde/TextMonde';
 import NavBarMonde from '../../components/NavBarMondes/NavBarMondes';
-import { WorldAPI } from '../../api/world-API'; // Supposons que c'est l'API pour récupérer les mondes et habitants
+import { WorldAPI } from '../../api/world-API';
 import ListPerso from '../../components/ListPerso/ListPerso';
 
 const LesMondes = () => {
-  const { id } = useParams(); // Récupère l'ID du monde à partir de l'URL
+  const { id } = useParams();
   const [monde, setMonde] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [currentHabitants, setCurrentHabitants] = useState([]);
 
   useEffect(() => {
     const fetchMonde = async () => {
@@ -20,6 +20,7 @@ const LesMondes = () => {
         const data = await WorldAPI.fetchAllWorld();
         const mondeData = data.mondes.find(m => m.id === id.toString());
         setMonde(mondeData);
+        setCurrentHabitants(mondeData.habitants); // Set the current habitants
       } catch (error) {
         setError(error.message);
       } finally {
@@ -29,6 +30,11 @@ const LesMondes = () => {
 
     fetchMonde();
   }, [id]);
+
+  const handleMondeChange = (newMonde) => {
+    setMonde(newMonde);
+    setCurrentHabitants(newMonde.habitants);
+  };
 
   if (loading) {
     return <div>Loading...</div>;
@@ -44,14 +50,15 @@ const LesMondes = () => {
 
   return (
     <div>
-      <NavBarMonde /> {/* Affiche la barre de navigation des mondes */}
-      <TextMonde id={id} /> {/* Affiche les détails du monde */}
-      <ListPerso habitants={monde.habitants} /> {/* Affiche les habitants du monde */}
+      <NavBarMonde />
+      <TextMonde id={id} onMondeChange={handleMondeChange} /> {/* Pass the handler to TextMonde */}
+      <ListPerso habitants={currentHabitants} /> {/* Pass the updated habitants */}
     </div>
   );
 };
 
 export default LesMondes;
+
 
 
 

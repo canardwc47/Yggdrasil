@@ -35,7 +35,7 @@
   .habitantsGrid {
     grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur mobile */
     gap: 10px;
-    margin: 0;
+    margin: 10px;
   }
 
   .habitantsTitle {

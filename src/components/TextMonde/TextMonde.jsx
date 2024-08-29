@@ -1,9 +1,8 @@
-// TextMonde.jsx
 import React, { useState, useEffect } from 'react';
 import { WorldAPI } from '../../api/world-API';
-import S from '../TextMonde/style.module.css';
+import S from './style.module.css';
 
-const TextMonde = ({ id }) => {
+const TextMonde = ({ id, onMondeChange }) => {
   const [monde, setMonde] = useState(null);
   const [allMondes, setAllMondes] = useState([]);
   const [currentMondeIndex, setCurrentMondeIndex] = useState(0);
@@ -16,10 +15,10 @@ const TextMonde = ({ id }) => {
       setError(null);
       try {
         const data = await WorldAPI.fetchAllWorld();
-        setAllMondes(data.mondes); // Stocke tous les mondes pour le carrousel
+        setAllMondes(data.mondes);
         const mondeData = data.mondes.find(m => m.id === id.toString());
         setMonde(mondeData);
-        setCurrentMondeIndex(data.mondes.findIndex(m => m.id === id.toString())); // Définit l'index actuel
+        setCurrentMondeIndex(data.mondes.findIndex(m => m.id === id.toString()));
       } catch (error) {
         setError(error.message);
       } finally {
@@ -44,8 +43,9 @@ const TextMonde = ({ id }) => {
     if (allMondes.length > 0) {
       const selectedMonde = allMondes[currentMondeIndex];
       setMonde(selectedMonde);
+      onMondeChange(selectedMonde); // Notify parent component of the change
     }
-  }, [currentMondeIndex, allMondes]);
+  }, [currentMondeIndex, allMondes, onMondeChange]);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -61,7 +61,6 @@ const TextMonde = ({ id }) => {
 
   return (
     <div className={S.MondeContainer}>
-      {/* Carrousel pour les écrans de 920px ou moins */}
       <div className={S.carouselWrapper}>
         <button onClick={goToPrevMonde} className={S.carouselButton}>←</button>
         <h1 className={S.mondeTitle}>{monde.title}</h1>
@@ -76,6 +75,27 @@ const TextMonde = ({ id }) => {
 };
 
 export default TextMonde;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

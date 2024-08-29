@@ -3,14 +3,14 @@
   text-align: center;
   color: #fff;
   max-width: 800px;
-  margin: 20px auto;
+  margin: -30px auto;
 }
 
 .mondeTitle {
   font-family: 'LBA';
   font-weight: normal;
   font-size: 64px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .mondeImageContainer {

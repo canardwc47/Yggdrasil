@@ -19,3 +19,28 @@
   margin-left: 350px;
   margin-right: 350px;
 }
+
+@media (max-width: 900px){
+  .title {
+    font-size: 48px; /* Réduire la taille du titre pour les tablettes */
+  }
+
+  .p {
+    font-size: 18px; /* Réduire la taille du texte pour les tablettes */
+    margin-left: 100px; /* Réduire les marges pour centrer le texte */
+    margin-right: 100px;
+  }
+}
+
+/* Styles pour les mobiles (en dessous de 768px) */
+@media (max-width: 420px) {
+  .title {
+    font-size: 36px; /* Réduire davantage la taille du titre pour les téléphones */
+  }
+
+  .p {
+    font-size: 16px; /* Réduire davantage la taille du texte pour les téléphones */
+    margin-left: 20px; /* Réduire les marges pour centrer le texte */
+    margin-right: 20px;
+  }
+}
