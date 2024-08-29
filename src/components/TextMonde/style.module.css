@@ -33,4 +33,78 @@
   padding: 40px;
 }
 
-  
+/* Conteneur pour le carrousel, affiché par défaut */
+.carouselWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Boutons du carrousel */
+.carouselButton {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+/* Masquer les flèches sur les grands écrans */
+@media (min-width: 921px) {
+  .carouselButton {
+    display: none; /* Masquer les flèches sur les écrans de plus de 920px */
+  }
+
+  .mondeTitle {
+    font-size: 64px; /* Taille du titre pour les grands écrans */
+  }
+}
+
+/* Afficher le carrousel et les flèches sur les écrans de 920px ou moins */
+@media (max-width: 920px) {
+  .carouselWrapper {
+    display: flex;
+  }
+
+  .carouselButton {
+    display: inline-block; /* Affiche les flèches pour les petits écrans */
+  }
+
+  .mondeTitle {
+    font-size: 36px; /* Taille ajustée pour les petits écrans */
+    margin: 0 20px;
+  }
+
+  /* Ajustement de la taille de l'image pour les tablettes */
+  .mondeImage {
+    width: 100%; /* Ajuste la taille de l'image pour les tablettes */
+    max-width: 150%; /* Limite la taille maximale de l'image pour les tablettes */
+  }
+}
+
+/* Pour les très petits écrans (570px ou moins) */
+@media (max-width: 580px) {
+  .mondeTitle {
+    font-size: 36px; /* Taille encore plus réduite pour les mobiles */
+  }
+
+  .carouselButton {
+    font-size: 20px; /* Réduction de la taille des boutons pour les mobiles */
+    padding: 0 5px;
+  }
+
+  /* Ajustement de la taille de l'image pour les mobiles */
+  .mondeImage {
+    width: 100%; /* Réduit la taille de l'image pour les mobiles */
+    max-width: 100%; /* Limite la taille maximale de l'image pour les mobiles */
+  }
+  .mondeContent {
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 20px;
+  }
+}
+
+

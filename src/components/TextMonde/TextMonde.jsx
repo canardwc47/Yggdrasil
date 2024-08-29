@@ -5,6 +5,8 @@ import S from '../TextMonde/style.module.css';
 
 const TextMonde = ({ id }) => {
   const [monde, setMonde] = useState(null);
+  const [allMondes, setAllMondes] = useState([]);
+  const [currentMondeIndex, setCurrentMondeIndex] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -14,8 +16,10 @@ const TextMonde = ({ id }) => {
       setError(null);
       try {
         const data = await WorldAPI.fetchAllWorld();
-        const mondeData = data.mondes.find(m => m.id === id.toString()); // Filtrer pour obtenir le monde par ID
+        setAllMondes(data.mondes); // Stocke tous les mondes pour le carrousel
+        const mondeData = data.mondes.find(m => m.id === id.toString());
         setMonde(mondeData);
+        setCurrentMondeIndex(data.mondes.findIndex(m => m.id === id.toString())); // Définit l'index actuel
       } catch (error) {
         setError(error.message);
       } finally {
@@ -25,6 +29,23 @@ const TextMonde = ({ id }) => {
 
     fetchMonde();
   }, [id]);
+
+  const goToNextMonde = () => {
+    setCurrentMondeIndex((prevIndex) => (prevIndex + 1) % allMondes.length);
+  };
+
+  const goToPrevMonde = () => {
+    setCurrentMondeIndex((prevIndex) => 
+      prevIndex === 0 ? allMondes.length - 1 : prevIndex - 1
+    );
+  };
+
+  useEffect(() => {
+    if (allMondes.length > 0) {
+      const selectedMonde = allMondes[currentMondeIndex];
+      setMonde(selectedMonde);
+    }
+  }, [currentMondeIndex, allMondes]);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -40,7 +61,12 @@ const TextMonde = ({ id }) => {
 
   return (
     <div className={S.MondeContainer}>
-      <h1 className={S.mondeTitle}>{monde.title}</h1>
+      {/* Carrousel pour les écrans de 920px ou moins */}
+      <div className={S.carouselWrapper}>
+        <button onClick={goToPrevMonde} className={S.carouselButton}>←</button>
+        <h1 className={S.mondeTitle}>{monde.title}</h1>
+        <button onClick={goToNextMonde} className={S.carouselButton}>→</button>
+      </div>
       <div className={S.mondeImageContainer}>
         {monde.image && <img src={monde.image} alt={monde.title} className={S.mondeImage} />}
       </div>
@@ -49,7 +75,6 @@ const TextMonde = ({ id }) => {
   );
 };
 
-// L'export doit se trouver ici
 export default TextMonde;
 
 

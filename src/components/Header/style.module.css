@@ -26,8 +26,6 @@
   /* Autres styles ici */
 }
 
-
-
 .logo {
   display: flex;
   align-items: center;
@@ -110,6 +108,8 @@
   cursor: pointer;
   margin-left: auto;
   margin-right: 15px;
+  position: relative;
+  z-index: 1100; /* Assurez-vous que le bouton est au-dessus du menu */
 }
 
 .burgerLine {
@@ -119,9 +119,11 @@
   transition: all 0.3s ease-in-out;
 }
 
-@media (max-width: 860px) {
+/* Styles pour les écrans de 470 pixels ou moins (mobiles) */
+@media (max-width: 470px) {
   .headerRelative, .headerAbsolute {
     justify-content: space-between;
+    margin-top: 10px;
   }
 
   .nav {
@@ -129,69 +131,145 @@
   }
 
   .nav.open {
-    display: flex; /* Affiche la navigation quand elle est ouverte */
+    display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 70px;
+    position: fixed;
+    top: 0; /* Menu commence en haut de la page */
     right: 0;
     width: 100%;
-    background: #8C5C8E;
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    background: #5A3D6D; /* Couleur de fond pour mobile */
+    padding: 15px;
+    z-index: 1000;
+    animation: slideIn 0.3s ease-out forwards; /* Animation d'ouverture */
   }
+
   .nav.open a {
-    font-size: 16px; /* Par exemple, ajustez à 20px pour le mode mobile */
+    font-size: 14px;
+    text-align: left;
+    padding: 8px 15px;
   }
 
   .nav ul {
     flex-direction: column;
     width: 100%;
-    align-items: center;
+    align-items: flex-start;
+    padding-left: 15px;
   }
 
   .nav li {
-    margin: 10px 0;
+    margin: 8px 0;
   }
 
   .burger {
     display: flex;
   }
+
+  .burger.active .burgerLine {
+    background-color: transparent;
+  }
+
+  .burger.active::before,
+  .burger.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .burger.active::before {
+    transform: rotate(45deg);
+  }
+
+  .burger.active::after {
+    transform: rotate(-45deg);
+  }
+
   .logo img {
-    height: 85px; /* Applique la réduction de 47/64 */
+    height: 70px;
   }
 }
 
-
-@media (max-width: 470px) {
+/* Styles pour les écrans de 860 pixels ou moins (tablettes) */
+@media (min-width: 471px) and (max-width: 860px) {
   .headerRelative, .headerAbsolute {
     justify-content: space-between;
+    margin-top: 5px;
+  }
+
+  .nav {
+    display: none; /* Cache la navigation par défaut */
   }
 
   .nav.open {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 70px;
+    position: fixed;
+    top: 0; /* Menu commence en haut de la page */
     right: 0;
     width: 100%;
-    background: #8C5C8E;
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    background: #5A3D6D; /* Couleur de fond pour tablette */
+    padding: 15px;
+    z-index: 1000; /* S'assurer que le menu est au-dessus du contenu */
+    animation: slideIn 0.3s ease-out forwards; /* Animation d'ouverture */
   }
+
+  .nav.open li {
+    width: 100%; /* Chaque élément de la liste occupe toute la largeur */
+  }
+
   .nav.open a {
-    font-size: 16px; /* Réduire un peu plus la taille pour les très petits écrans */
-  }
-
-  .nav ul {
-    flex-direction: column;
+    display: block; /* Permet au lien de prendre toute la largeur de son parent */
     width: 100%;
-    align-items: center;
-  }
-
-  .nav li {
-    margin: 10px 0;
+    padding: 15px 20px;
+    text-align: left;
+    line-height: 1.5;
+    border-bottom: 1px solid #e0e0e0;
+    color: #fff; /* Couleur de texte blanc */
+    font-size: 16px; /* Taille du texte sur tablette */
   }
 
   .burger {
     display: flex;
   }
+
+  .burger.active .burgerLine {
+    background-color: transparent;
+  }
+
+  .burger.active::before,
+  .burger.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .burger.active::before {
+    transform: rotate(45deg);
+  }
+
+  .burger.active::after {
+    transform: rotate(-45deg);
+  }
+
   .logo img {
-    height: 50px; /* Applique la réduction de 33/45 */
+    height: 85px; /* Taille du logo pour les tablettes */
+  }
+
+  @keyframes slideIn {
+    from {
+      right: -100%;
+    }
+    to {
+      right: 0;
+    }
   }
 }
+
+

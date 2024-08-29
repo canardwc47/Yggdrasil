@@ -5,9 +5,9 @@ import S from './style.module.css';
 const GrandeCard = ({ habitant, onClose, onNext, onPrev }) => {
   return (
     <div className={S.overlay}>
+      <button className={S.backButton} onClick={onClose}>◄</button> {/* Utilisation de la flèche de retour en arrière */}
       <button className={S.prevButton} onClick={onPrev}>◄</button>
       <div className={S.grandeCard}>
-        <button className={S.closeButton} onClick={onClose}>×</button>
         <div className={S.grandeCardContent}>
           <div className={S.imageContainer}>
             <img src={habitant.image} alt={habitant.name} className={S.grandeCardImage} />
@@ -31,5 +31,7 @@ const GrandeCard = ({ habitant, onClose, onNext, onPrev }) => {
 };
 
 export default GrandeCard;
+
+
 
 

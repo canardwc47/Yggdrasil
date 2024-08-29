@@ -32,6 +32,13 @@
   color: #fff;
 }
 
+/* Ajoutez cette media query */
+@media (max-width: 920px) {
+  .navContainer {
+    display: none; /* Masquer la NavBar sur les écrans de 920px ou moins */
+  }
+}
+
 
 
   

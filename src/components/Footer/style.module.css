@@ -8,7 +8,6 @@
   background: rgba(0, 0, 0, 0); /* Transparence pour que le fond soit le même que celui de la page */
   z-index: 500;
   color: white; /* Couleur du texte */
-  padding: 20px;
   margin: 20px; /* Ajoute une marge autour du footer */
   margin-bottom: -10px;
 }

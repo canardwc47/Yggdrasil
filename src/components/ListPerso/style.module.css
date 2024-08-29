@@ -1,23 +1,48 @@
-/* style.module.css */
 .habitantsContainer {
-    padding: 20px;
-    color: #fff;
-  }
-  
-  .habitantsTitle {
-    text-align: center;
-    font-family: 'LBA', sans-serif;
-    font-weight: normal;
-    font-size: 48px;
-    margin-bottom: 20px;
-  }
-  
+  padding: 20px;
+  color: #fff;
+}
+
+.habitantsTitle {
+  text-align: center;
+  font-family: 'LBA', sans-serif;
+  font-weight: normal;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.habitantsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 colonnes de taille égale par défaut */
+  gap: 20px; /* Espace entre les cartes */
+  justify-content: center;
+}
+
+/* Styles pour les écrans de 870 pixels ou moins (tablettes) */
+@media (max-width: 920px) {
   .habitantsGrid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 colonnes de taille égale */
-    gap: 20px; /* Espace entre les cartes */
-    justify-content: center;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur tablette */
+    gap: 15px;
   }
+
+  .habitantsTitle {
+    font-size: 36px; /* Réduire la taille du titre pour tablette */
+  }
+}
+
+/* Styles pour les écrans de 470 pixels ou moins (mobiles) */
+@media (max-width: 580px) {
+  .habitantsGrid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur mobile */
+    gap: 10px;
+    margin: 0;
+  }
+
+  .habitantsTitle {
+    font-size: 32px; /* Réduire la taille du titre pour mobile */
+  }
+}
+
   
   
   
