@@ -1,4 +1,5 @@
 /* src/components/Background.module.css */
+
 .background {
   position: absolute; /* Utilisez absolute pour permettre le défilement */
   top: 0;

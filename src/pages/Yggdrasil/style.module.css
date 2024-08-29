@@ -1,11 +1,441 @@
 .container {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Place le contenu en bas du conteneur */
   width: 100%;
-  height: 100%;
-  min-height: 200vh;
+  min-height: 100vh;
   overflow: hidden;
   background: linear-gradient(180deg, #646A7E, #646A7E, #786386, #8C5C8E);
 }
+
+.cloud {
+  position: absolute;
+  width: 50%;
+  height: auto;
+  z-index: 0;
+  animation: moveClouds 20s linear infinite;
+}
+
+/* Positionnement des nuages */
+.cloud1 {
+  top: 10%;
+  right: 60%;
+  animation-duration: 20s;
+}
+
+.cloud2 {
+  top: 70%;
+  left: 60%;
+  animation-duration: 35s;
+}
+
+.cloud3 {
+  top: 50%;
+  left: -30%;
+  animation-duration: 30s;
+}
+
+.cloud4 {
+  top: 30%;
+  left: 50%;
+  animation-duration: 35s;
+}
+
+.cloud5 {
+  top: 5px;
+  left: 55%;
+  animation-duration: 15s;
+}
+
+.cloud6 {
+  top: 60%;
+  right: 30%;
+  animation-duration: 25s;
+}
+
+/* Animation de mouvement des nuages */
+@keyframes moveClouds {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(30%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.tree {
+  width: 100%;
+  height: auto;
+  margin-top: 0;
+  margin-bottom: 0; /* Assurez-vous qu'il n'y a pas d'espace en bas */
+}
+
+.titleContainer {
+  position: absolute;
+  top: 30px;
+  left: 30%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  z-index: 10; /* Pour s'assurer que le texte est au-dessus de l'arbre */
+}
+
+.title {
+  font-family: 'LBA', sans-serif;
+  font-weight: normal;
+  font-size: 128px;
+  margin-left: 0;
+}
+
+.descriptionContainer {
+  position: absolute;
+  top: 100px;
+  right: 150px;
+  width: 30%;
+  text-align: center;
+  color: white;
+  z-index: 10;
+}
+
+.description {
+  font-family: 'Lacquer', sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  margin: 0;
+}
+
+@keyframes floatCircle {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, -10px);
+  }
+  50% {
+    transform: translate(20px, 0);
+  }
+  75% {
+    transform: translate(10px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.worldCircle {
+  position: absolute;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: floatCircle 5s infinite ease-in-out;
+}
+
+/* Taille et positionnement des cercles pour les grands écrans */
+.circle1 {
+  animation-delay: 0s;
+  width: 180px;
+  height: 180px;
+  top: 32%;
+  left: 50%;
+}
+
+.circle2 {
+  animation-delay: 0.5s;
+  width: 180px;
+  height: 180px;
+  top: 52%;
+  left: 45%;
+}
+
+.circle3 {
+  animation-delay: 1s;
+  width: 180px;
+  height: 180px;
+  top: 65%;
+  left: 32%;
+}
+
+.circle4 {
+  animation-delay: 1.5s;
+  width: 180px;
+  height: 180px;
+  top: 77%;
+  left: 23%;
+}
+
+.circle5 {
+  animation-delay: 2s;
+  width: 220px;
+  height: 220px;
+  top: 41%;
+  left: 18%;
+}
+
+.circle6 {
+  animation-delay: 2.5s;
+  width: 150px;
+  height: 150px;
+  top: 66%;
+  left: 62%;
+}
+
+.circle7 {
+  animation-delay: 3s;
+  width: 180px;
+  height: 180px;
+  top: 48%;
+  left: 80%;
+}
+
+.circle8 {
+  animation-delay: 3.5s;
+  width: 190px;
+  height: 190px;
+  top: 80%;
+  left: 45%;
+}
+
+.circle9 {
+  animation-delay: 4s;
+  width: 200px;
+  height: 200px;
+  top: 75%;
+  left: 70%;
+}
+
+.worldCircle p {
+  font-family: 'LBA';
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.worldCircle:hover p {
+  opacity: 1;
+}
+
+.worldCircle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.worldCircle:hover img {
+  transform: scale(2.5);
+}
+
+/* Pour les écrans de 744 pixels ou moins (tablettes) */
+@media (max-width: 860px) {
+
+  .container {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(180deg, #646A7E, #646A7E, #786386, #8C5C8E);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .titleContainer {
+    top: 30px;
+    left: 35%;
+    transform: translateX(-50%);
+  }
+
+  .title {
+    font-size: 80px;
+  }
+
+  .descriptionContainer {
+    margin-top: 220px;
+    top: 5px;
+    right: 40px;
+    width: 30%;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .worldCircle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .worldCircle p {
+    font-size: 16px;
+  }
+
+  .cloud {
+    width: 40%;
+  }
+
+  .circle1 {
+    top: 28%;
+    left: 45%;
+  }
+
+  .circle2 {
+    top: 50%;
+    left: 40%;
+  }
+
+  .circle3 {
+    top: 60%;
+    left: 30%;
+  }
+
+  .circle4 {
+    top: 72%;
+    left: 20%;
+  }
+
+  .circle5 {
+    top: 38%;
+    left: 15%;
+  }
+
+  .circle6 {
+    top: 62%;
+    left: 55%;
+  }
+
+  .circle7 {
+    top: 45%;
+    left: 75%;
+  }
+
+  .circle8 {
+    top: 75%;
+    left: 40%;
+  }
+
+  .circle9 {
+    top: 70%;
+    left: 65%;
+  }
+}
+
+/* Pour les écrans de 470 pixels ou moins (mobiles) */
+@media (max-width: 470px) {
+
+  .container {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(180deg, #646A7E, #646A7E, #786386, #8C5C8E);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .titleContainer {
+    top: 45px;
+    left: 40%;
+    transform: translateX(-50%);
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .descriptionContainer {
+    margin-top: 150px;
+    top: 25px;
+    right: 20px;
+    width: 50%;
+  }
+
+  .description {
+    font-size: 10px;
+  }
+
+  .worldCircle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .worldCircle p {
+    font-size: 12px;
+  }
+
+  .circle1 {
+    top: 38%;
+    left: 40%;
+    transform: translateX(-50%);
+  }
+
+  .circle2 {
+    top: 50%;
+    left: 35%;
+    transform: translateX(-50%);
+  }
+
+  .circle3 {
+    top: 68%;
+    left: 25%;
+    transform: translateX(-50%);
+  }
+
+  .circle4 {
+    top: 78%;
+    left: 15%;
+    transform: translateX(-50%);
+  }
+
+  .circle5 {
+    top: 40%;
+    left: 10%;
+  }
+
+  .circle6 {
+    top: 68%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .circle7 {
+    top: 44%;
+    left: 70%;
+    transform: translateX(-50%);
+  }
+
+  .circle8 {
+    top: 80%;
+    left: 35%;
+    transform: translateX(-50%);
+  }
+
+  .circle9 {
+    top: 75%;
+    left: 60%;
+    transform: translateX(-50%);
+  }
+  
+  .cloud {
+    width: 40%;
+  }
+}
+
 
 .cloud {
   position: absolute;
@@ -247,13 +677,15 @@
 @media (max-width: 860px) {
 
   .container {
-    position: relative;
     width: 100%;
-    height: 20%;
+    height: auto;
     min-height: 100vh;
     overflow: hidden;
     background: linear-gradient(180deg, #646A7E, #646A7E, #786386, #8C5C8E);
+    background-size: cover;
+    background-repeat: no-repeat;
   }
+
   .titleContainer {
     top: 30px;
     left: 35%;
@@ -334,17 +766,19 @@
   }
 }
 
-/* Pour les écrans de 340 pixels ou moins (mobiles) */
+/* Pour les écrans de 470 pixels ou moins (mobiles) */
 @media (max-width: 470px) {
 
   .container {
-    position: relative;
     width: 100%;
-    height: 20%;
+    height: auto;
     min-height: 100vh;
     overflow: hidden;
     background: linear-gradient(180deg, #646A7E, #646A7E, #786386, #8C5C8E);
+    background-size: cover;
+    background-repeat: no-repeat;
   }
+
   .titleContainer {
     top: 45px;
     left: 40%;
@@ -374,7 +808,6 @@
   .worldCircle p {
     font-size: 12px;
   }
-
 
   .circle1 {
     top: 38%;
@@ -428,58 +861,9 @@
     left: 60%;
     transform: translateX(-50%);
   }
+
   .cloud {
-    position: absolute;
-    width: 50%;
-    height: auto;
-    z-index: 0;
-    animation: moveClouds 20s linear infinite;
-  }
-  
-  /* Positionnement des nuages */
-  .cloud1 {
-    top: 10%;
-    right: 60%;
-    animation-duration: 20s;
-  }
-  
-  .cloud2 {
-    top: 70%;
-    left: 60%;
-    animation-duration: 35s;
-  }
-  
-  .cloud3 {
-    top: 50%;
-    left: -30%;
-    animation-duration: 30s;
-  }
-  
-  .cloud4 {
-    top: 30%;
-    left: 50%;
-    animation-duration: 35s;
-  }
-  
-  .cloud5 {
-    top: 5px;
-    left: 55%;
-    animation-duration: 15s;
-  }
-  
-  .cloud6 {
-    top: 60%;
-    right: 30%;
-    animation-duration: 25s;
-  }
-  
-  .tree {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: auto;
-    margin-top: 200px;
+    width: 40%;
   }
 }
 
