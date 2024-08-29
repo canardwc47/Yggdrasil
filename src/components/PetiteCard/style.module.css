@@ -29,7 +29,7 @@
 }
 
 .card:hover .cardImage {
-  transform: scale(1.8); /* Zoomer l'image à 180% lors du survol */
+  transform: scale(1.6); /* Zoomer l'image à 180% lors du survol */
 }
 
 .card:hover {

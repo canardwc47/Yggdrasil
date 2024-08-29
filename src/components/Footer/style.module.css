@@ -64,16 +64,14 @@ a {
   height: 100px; /* Taille par défaut */
 }
 
-@media (max-width: 744px) {
+@media (max-width: 860px) {
   .footerRelative, .footerAbsolute {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    margin-right: 10px;
+    padding: 0;
   }
 
   .left, .right {
     align-items: center;
-    margin: 10px 0;
   }
 
   a {
@@ -85,16 +83,33 @@ a {
   }
 }
 
-@media (max-width: 340px) {
+
+
+/* Media query pour les écrans de 340 pixels ou moins (portables) */
+@media (max-width: 470px) {
+  .footerRelative, .footerAbsolute {
+    margin-bottom: 0px;
+    margin-right: 10px;
+    padding: 0;
+  }
+
+  .left, .right {
+    align-items: center;
+    margin: 10px 0;
+  }
+
   a {
-    font-size: 14px; /* Réduire encore plus la taille du texte pour les mobiles */
+    font-size: 10px; /* Réduire encore plus la taille du texte pour les mobiles */
+  }
+
+  .li {
+    margin: 1px;
   }
 
   .center img {
     height: 40px; /* Réduire encore plus la taille du logo pour les mobiles */
   }
 }
-
 
 
 

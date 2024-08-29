@@ -109,6 +109,7 @@
   height: 30px;
   cursor: pointer;
   margin-left: auto;
+  margin-right: 15px;
 }
 
 .burgerLine {
@@ -118,46 +119,32 @@
   transition: all 0.3s ease-in-out;
 }
 
-@media (max-width: 744px) {
-  .header {
-    width: 80%;
-  }
-
-  .logo img {
-    height: 60px;
-  }
-
-  .nav a {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 340px) {
-  .logo img {
-    height: 40px;
-  }
-
-  .nav a {
-    font-size: 16px;
+@media (max-width: 860px) {
+  .headerRelative, .headerAbsolute {
+    justify-content: space-between;
   }
 
   .nav {
-    display: none;
+    display: none; /* Cache la navigation par défaut */
   }
 
   .nav.open {
-    display: flex;
+    display: flex; /* Affiche la navigation quand elle est ouverte */
     flex-direction: column;
     position: absolute;
     top: 70px;
-    left: 0;
+    right: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    background: #8C5C8E;
+  }
+  .nav.open a {
+    font-size: 16px; /* Par exemple, ajustez à 20px pour le mode mobile */
   }
 
   .nav ul {
     flex-direction: column;
     width: 100%;
+    align-items: center;
   }
 
   .nav li {
@@ -166,5 +153,45 @@
 
   .burger {
     display: flex;
+  }
+  .logo img {
+    height: 85px; /* Applique la réduction de 47/64 */
+  }
+}
+
+
+@media (max-width: 470px) {
+  .headerRelative, .headerAbsolute {
+    justify-content: space-between;
+  }
+
+  .nav.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: #8C5C8E;
+  }
+  .nav.open a {
+    font-size: 16px; /* Réduire un peu plus la taille pour les très petits écrans */
+  }
+
+  .nav ul {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .nav li {
+    margin: 10px 0;
+  }
+
+  .burger {
+    display: flex;
+  }
+  .logo img {
+    height: 50px; /* Applique la réduction de 33/45 */
   }
 }

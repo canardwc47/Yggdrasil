@@ -45,44 +45,44 @@ const Yggdrasil = () => {
       </div>
       <div className={styles.descriptionContainer}>
         <p className={styles.description}>
-          Yggdrasil, l'arbre de vie, est le centre de l'univers dans la mythologie nordique. Il relie les neuf mondes et assure la cohésion du cosmos. Son tronc massif et ses branches s'étendent à travers les cieux, reliant les royaumes des dieux, des hommes et des créatures mystiques, tandis que ses racines plongent profondément dans les terres de l'obscurité et des secrets anciens.
+        Yggdrasil joue un rôle central et vital dans la mythologie nordique, servant de lien cosmique entre les neuf mondes. Il symbolise l'interconnexion et l'équilibre de l'univers.
         </p>
       </div>
 
-      {/* Ajout des cercles avec les noms des mondes et positions ajustables */}
-      <div className={`${styles.worldCircle} ${styles.circle1}`} onClick={() => handleNavigation(1)} style={{ top: '32%', left: '50%' }}>
+      {/* Cercles avec les noms des mondes */}
+      <div className={`${styles.worldCircle} ${styles.circle1}`} onClick={() => handleNavigation(1)}>
         <img src={asgard} alt="Asgard" />
         <p>Asgard</p>
       </div>
-      <div className={`${styles.worldCircle} ${styles.circle2}`} onClick={() => handleNavigation(2)} style={{ top: '52%', left: '45%' }}>
+      <div className={`${styles.worldCircle} ${styles.circle2}`} onClick={() => handleNavigation(2)}>
         <img src={midgard} alt="Midgard" />
         <p>Midgard</p>
       </div>
-      <div className={`${styles.worldCircle} ${styles.circle3}`} onClick={() => handleNavigation(3)} style={{ top: '65%', left: '32%' }}>
+      <div className={`${styles.worldCircle} ${styles.circle3}`} onClick={() => handleNavigation(3)}>
         <img src={vanaheim} alt="Vanaheim" />
         <p>Vanaheim</p>
       </div>
-      <div className={`${styles.worldCircle} ${styles.circle4}`} onClick={() => handleNavigation(4)} style={{ top: '77%', left: '23%' }}>
+      <div className={`${styles.worldCircle} ${styles.circle4}`} onClick={() => handleNavigation(4)}>
         <img src={jotunheim} alt="Jotunheim" />
         <p>Jotunheim</p>
       </div>
-      <div className={`${styles.worldCircle} ${styles.circle5}`} onClick={() => handleNavigation(5)} style={{ top: '41%', left: '18%' }}>
+      <div className={`${styles.worldCircle} ${styles.circle5}`} onClick={() => handleNavigation(5)}>
         <img src={alfheim} alt="Alfheim" />
         <p>Alfheim</p>
       </div>
-      <div className={`${styles.worldCircle} ${styles.circle6}`} onClick={() => handleNavigation(6)} style={{ top: '66%', left: '62%' }}>
+      <div className={`${styles.worldCircle} ${styles.circle6}`} onClick={() => handleNavigation(6)}>
         <img src={nidavellir} alt="Nidavellir" />
         <p>Nidavellir</p>
       </div>
-      <div className={`${styles.worldCircle} ${styles.circle7}`} onClick={() => handleNavigation(7)} style={{ top: '48%', left: '80%' }}>
+      <div className={`${styles.worldCircle} ${styles.circle7}`} onClick={() => handleNavigation(7)}>
         <img src={muspelheim} alt="Muspelheim" />
         <p>Muspelheim</p>
       </div>
-      <div className={`${styles.worldCircle} ${styles.circle8}`} onClick={() => handleNavigation(8)} style={{ top: '80%', left: '45%' }}>
+      <div className={`${styles.worldCircle} ${styles.circle8}`} onClick={() => handleNavigation(8)}>
         <img src={niflheim} alt="Niflheim" />
         <p>Niflheim</p>
       </div>
-      <div className={`${styles.worldCircle} ${styles.circle9}`} onClick={() => handleNavigation(9)} style={{ top: '75%', left: '70%' }}>
+      <div className={`${styles.worldCircle} ${styles.circle9}`} onClick={() => handleNavigation(9)}>
         <img src={helheim} alt="Helheim" />
         <p>Helheim</p>
       </div>
@@ -91,6 +91,7 @@ const Yggdrasil = () => {
 };
 
 export default Yggdrasil;
+
 
 
 
