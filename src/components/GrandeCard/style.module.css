@@ -36,16 +36,17 @@
   box-shadow: none;
 }
 
-.backButton {
+/* Nouveau bouton "Close" */
+.closeButton {
   position: absolute;
-  top: 145px;
-  left: 550px;
+  top: 20px;
+  right: 20px;
   background: transparent;
   border: none;
   color: white;
   font-size: 24px;
   cursor: pointer;
-  z-index: 500;
+  z-index: 1001;
 }
 
 .grandeCardContent {
@@ -163,17 +164,12 @@
     font-size: 11px; /* Réduire la taille du texte de description */
   }
 
-  .backButton {
-    position: absolute;
-    top: 185px;
-    left: 45px;
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
-    z-index: 500;
+  .closeButton {
+    top: 10px;
+    right: 10px;
+    font-size: 18px; /* Réduire la taille du bouton close */
   }
+
   .prevButton {
     left: -5px; /* Ajuster la position du bouton précédent */
     font-size: 20px; /* Réduire la taille du bouton */
@@ -184,6 +180,7 @@
     font-size: 20px; /* Réduire la taille du bouton */
   }
 }
+
 
 
   

@@ -1,11 +1,16 @@
-// GrandeCard.jsx
 import React from 'react';
 import S from './style.module.css';
 
 const GrandeCard = ({ habitant, onClose, onNext, onPrev }) => {
+  const handleOverlayClick = (e) => {
+    if (e.target === e.currentTarget) {
+      onClose(); // Appelle la fonction onClose si on clique sur l'overlay
+    }
+  };
+
   return (
-    <div className={S.overlay}>
-      <button className={S.backButton} onClick={onClose}>◄</button> {/* Utilisation de la flèche de retour en arrière */}
+    <div className={S.overlay} onClick={handleOverlayClick}>
+      <button className={S.closeButton} onClick={onClose}>✕</button> {/* Bouton de fermeture */}
       <button className={S.prevButton} onClick={onPrev}>◄</button>
       <div className={S.grandeCard}>
         <div className={S.grandeCardContent}>
@@ -31,6 +36,7 @@ const GrandeCard = ({ habitant, onClose, onNext, onPrev }) => {
 };
 
 export default GrandeCard;
+
 
 
 

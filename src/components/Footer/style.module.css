@@ -23,7 +23,7 @@
   z-index: 500;
   color: white; /* Couleur du texte */
   padding: 20px;
-  margin: 20px; /* Ajoute une marge autour du footer */
+  margin-left: 10px;
 }
 
 .ul {
